@@ -3,12 +3,20 @@
  * @file
  * Gabarit de page — Ambassade de Mauritanie en France.
  *
- * Régions déclarées dans ambassade_theme.info.yml : header, primary_menu,
- * breadcrumb, highlighted, hero, quick_access, content, sidebar_first,
- * contact_block, footer_top, footer_bottom, help.
+ * Régions déclarées dans ambassade_theme.info.yml : topbar, header,
+ * primary_menu, breadcrumb, highlighted, hero, quick_access, news, content,
+ * sidebar_first, contact_block, footer_top, footer_bottom, help.
  */
 #}
 <div class="layout-page">
+
+  {% if page.topbar %}
+    <div class="topbar">
+      <div class="container topbar__inner">
+        {{ page.topbar }}
+      </div>
+    </div>
+  {% endif %}
 
   <header class="site-header" data-nav-header>
     <div class="container site-header__inner">
@@ -24,6 +32,7 @@
       </div>
       <div id="primary-menu-panel" data-nav-panel>
         {{ page.primary_menu }}
+        <a href="/demarches" class="button button--primary site-header__cta">{{ 'Prendre RDV'|t }}</a>
       </div>
     </div>
   </header>
@@ -41,7 +50,7 @@
   {% endif %}
 
   {% if page.hero %}
-    <div class="region-hero">
+    <div class="region-hero hero">
       {{ page.hero }}
     </div>
   {% endif %}
@@ -74,6 +83,14 @@
     <div class="region-quick-access">
       <div class="container">
         {{ page.quick_access }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.news %}
+    <div class="region-news">
+      <div class="container">
+        {{ page.news }}
       </div>
     </div>
   {% endif %}

@@ -111,11 +111,13 @@ components:
   css:
     component:
       css/components/layout.css: {  }
+      css/components/topbar.css: {  }
       css/components/header.css: {  }
       css/components/hero.css: {  }
       css/components/alert-banner.css: {  }
       css/components/card.css: {  }
       css/components/accordion.css: {  }
+      css/components/infos-pratiques.css: {  }
       css/components/footer.css: {  }
       css/components/form-controls.css: {  }
       css/components/search.css: {  }

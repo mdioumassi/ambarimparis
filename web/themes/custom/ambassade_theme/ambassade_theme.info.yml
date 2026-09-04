@@ -27,12 +27,14 @@ libraries-extend:
   core/drupal.tablesort:
     - ambassade_theme/drupal.tablesort
 regions:
+  topbar: 'Bandeau supérieur'
   header: 'En-tête'
   primary_menu: 'Menu principal'
   breadcrumb: "Fil d'Ariane"
   highlighted: 'Alertes et messages'
   hero: 'Hero (page d''accueil)'
   quick_access: 'Accès rapides (page d''accueil)'
+  news: 'Actualités (page d''accueil)'
   content: 'Contenu'
   sidebar_first: 'Barre latérale'
   contact_block: 'Bloc contact (page d''accueil)'

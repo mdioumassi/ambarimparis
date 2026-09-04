@@ -108,6 +108,13 @@
   --transition-fast: 120ms ease;
   --transition-base: 200ms ease;
 
+  /* --- Alias maquette Figma « Accueil — Desktop 1440 » (016) ----------- */
+  --radius-card: 10px;
+  --radius-btn: 6px;
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-card-soft: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --color-footer: #003b1f;
+
   /* --- Cible tactile minimale (RGAA / WCAG 2.5.5) --------------------- */
   --tap-target-min: 44px;
 
