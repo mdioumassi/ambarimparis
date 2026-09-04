@@ -1,0 +1,63 @@
+/**
+ * Champs de formulaire : apparence, focus visible, état d'erreur.
+ * Complète form.css (spacing hérité du starterkit) avec les tokens du
+ * design system. Propriétés logiques pour un support RTL natif.
+ */
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  max-width: 32rem;
+}
+
+.form-item label {
+  font-weight: var(--font-weight-semibold);
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']),
+select,
+textarea {
+  min-height: var(--tap-target-min);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  border: var(--border-width) solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  width: 100%;
+}
+
+textarea {
+  min-height: calc(var(--tap-target-min) * 2);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 1px;
+  border-color: var(--color-focus);
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: var(--border-width-thick) solid var(--color-danger);
+}
+
+.form-item--error-message {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+}
+
+.description {
+  color: var(--color-text-muted);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}

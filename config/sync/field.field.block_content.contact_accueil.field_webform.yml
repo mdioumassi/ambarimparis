@@ -1,0 +1,23 @@
+uuid: 985a441d-6702-41bd-bafe-a6a73cf735b0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_accueil
+    - field.storage.block_content.field_webform
+  module:
+    - webform
+id: block_content.contact_accueil.field_webform
+field_name: field_webform
+entity_type: block_content
+bundle: contact_accueil
+label: 'Formulaire de contact'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings: {  }
+field_type: webform

@@ -5,11 +5,19 @@ dependencies:
   config:
     - field.field.paragraph.texte.field_texte
     - paragraphs.paragraphs_type.texte
+  module:
+    - text
 id: paragraph.texte.default
 targetEntityType: paragraph
 bundle: texte
 mode: default
-content: {  }
+content:
+  field_texte:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
-  field_texte: true
   search_api_excerpt: true

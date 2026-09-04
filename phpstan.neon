@@ -5,5 +5,3 @@ parameters:
     - web/themes/custom
   excludePaths:
     - '*/tests/fixtures/*'
-  drupal:
-    drupal_root: web

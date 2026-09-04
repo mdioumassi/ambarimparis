@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Alerte consulaire, rendue en bandeau (vue "alertes_actives", région
+ * "highlighted"). Le niveau (info/important/urgent) pilote la couleur et
+ * le rôle ARIA.
+ */
+#}
+{% set niveau = node.field_niveau.value %}
+{% set role = niveau == 'urgent' ? 'alert' : 'status' %}
+<div{{ attributes.addClass('alert-banner', 'alert-banner--' ~ niveau) }} role="{{ role }}">
+  <svg class="alert-banner__icon" aria-hidden="true">
+    <use href="{{ niveau == 'urgent' ? '#icon-alert-warning' : '#icon-alert-info' }}"></use>
+  </svg>
+  <div class="alert-banner__content">
+    <span class="alert-banner__level">
+      {% if niveau == 'urgent' %}{{ 'Urgent'|t }}
+      {% elseif niveau == 'important' %}{{ 'Important'|t }}
+      {% else %}{{ 'Information'|t }}
+      {% endif %}
+    </span>
+    <div class="alert-banner__message">
+      {{ content.field_message }}
+    </div>
+  </div>
+</div>

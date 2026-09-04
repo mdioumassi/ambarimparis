@@ -1,0 +1,47 @@
+/**
+ * Composant : accordéon (BEM), implémenté avec <details>/<summary> natifs
+ * pour une accessibilité clavier/lecteur d'écran sans JavaScript.
+ */
+
+.accordion,
+.field--name-field-faq .field__items {
+  border-block-start: var(--border-width) solid var(--color-border);
+}
+
+.accordion__item {
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.accordion__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--tap-target-min);
+  padding-block: var(--space-3);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__icon {
+  inline-size: 1em;
+  block-size: 1em;
+  flex-shrink: 0;
+  fill: currentColor;
+  transition: transform var(--transition-base);
+}
+
+.accordion__item[open] .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  padding-block-end: var(--space-4);
+  color: var(--color-text-muted);
+}

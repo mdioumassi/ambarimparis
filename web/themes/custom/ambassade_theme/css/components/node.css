@@ -1,0 +1,60 @@
+/**
+ * Mise en forme des fiches de contenu (démarche, actualité, page).
+ */
+
+.node--unpublished {
+  background-color: var(--color-gold-100);
+}
+
+.node--type-demarche,
+.node--type-actualite.node--view-mode-full {
+  padding-block: var(--space-6);
+}
+
+.node__header {
+  margin-block-end: var(--space-5);
+}
+
+.node__meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-block: 0 var(--space-6);
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.node__meta-grid dt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.node__meta-grid dd {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+.node__meta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.node__media {
+  margin-block-end: var(--space-5);
+}
+
+.node__media img {
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+.node__chapo {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  margin-block-end: var(--space-5);
+}

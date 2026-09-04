@@ -1,0 +1,28 @@
+uuid: 4ecca189-6346-4d2b-916f-13b291227068
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_accueil
+    - field.storage.block_content.field_actions
+    - paragraphs.paragraphs_type.carte
+  module:
+    - entity_reference_revisions
+id: block_content.hero_accueil.field_actions
+field_name: field_actions
+entity_type: block_content
+bundle: hero_accueil
+label: 'Actions principales'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      carte: carte
+    negate: 0
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions

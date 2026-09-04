@@ -1,0 +1,8 @@
+uuid: cdbb445c-2c67-4ef3-80bb-d72b36e74265
+langcode: fr
+status: true
+dependencies: {  }
+id: acces_rapides
+label: 'Accès rapides'
+revision: true
+description: null

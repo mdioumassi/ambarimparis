@@ -1,0 +1,59 @@
+/**
+ * Composant : bandeau d'alerte consulaire (BEM).
+ * Variantes : .alert-banner--info, .alert-banner--important,
+ * .alert-banner--urgent. Rôle ARIA "status"/"alert" porté par le gabarit.
+ */
+
+.alert-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  padding-inline: var(--gutter);
+  border-block-end: var(--border-width-thick) solid transparent;
+}
+
+.alert-banner__icon {
+  flex-shrink: 0;
+  inline-size: 1.5em;
+  block-size: 1.5em;
+  margin-block-start: 0.1em;
+  fill: currentColor;
+}
+
+.alert-banner__content {
+  flex: 1;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+}
+
+.alert-banner__level {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-block-end: var(--space-1);
+}
+
+.alert-banner__message {
+  margin: 0;
+}
+
+.alert-banner--info {
+  background-color: var(--color-info-100);
+  border-color: var(--color-info-700);
+  color: var(--color-ink-900);
+}
+
+.alert-banner--important {
+  background-color: var(--color-gold-100);
+  border-color: var(--color-gold-600);
+  color: var(--color-ink-900);
+}
+
+.alert-banner--urgent {
+  background-color: var(--color-red-100);
+  border-color: var(--color-red-700);
+  color: var(--color-red-700);
+}

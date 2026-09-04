@@ -1,0 +1,75 @@
+/**
+ * Composant : hero d'accueil (BEM). Trois actions principales mises en
+ * avant (Prendre RDV, Demander un visa, Renouveler passeport/CNI).
+ */
+
+.hero {
+  background: linear-gradient(180deg, var(--color-green-50), var(--color-background));
+  padding-block: var(--space-8);
+}
+
+.hero__title {
+  max-width: var(--content-narrow-width);
+  margin-block: 0 var(--space-3);
+  font-size: var(--font-size-xxl);
+  color: var(--color-green-900);
+}
+
+.hero__lead {
+  max-width: var(--content-narrow-width);
+  margin-block-end: var(--space-6);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+}
+
+.hero__actions,
+.hero .field--name-field-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .hero__actions,
+  .hero .field--name-field-actions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hero__action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-border);
+  text-decoration: none;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.hero__action:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  color: var(--color-text);
+}
+
+.hero__action-icon {
+  inline-size: 2rem;
+  block-size: 2rem;
+  fill: var(--color-primary);
+}
+
+.hero__action-title {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+}
+
+.hero__action-description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}

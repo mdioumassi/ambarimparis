@@ -1,0 +1,88 @@
+/**
+ * Composant : bouton (BEM).
+ *
+ * Variantes : .button--primary (défaut), .button--secondary, .button--ghost.
+ * États : hover, focus-visible (voir base.css), disabled, [aria-busy].
+ * Support RTL natif via propriétés logiques.
+ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap-target-min);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-5);
+  border: var(--border-width-thick) solid transparent;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: var(--color-primary-contrast);
+}
+
+.button--secondary {
+  background-color: var(--color-white);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-green-50);
+}
+
+.button--ghost {
+  background-color: transparent;
+  border-color: var(--color-gray-300);
+  color: var(--color-text);
+}
+
+.button--ghost:hover {
+  border-color: var(--color-ink-500);
+  background-color: var(--color-gray-100);
+}
+
+.button--accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.button--accent:hover {
+  background-color: var(--color-gold-600);
+  border-color: var(--color-gold-600);
+  color: var(--color-white);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button__icon {
+  inline-size: 1.25em;
+  block-size: 1.25em;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.button--block {
+  width: 100%;
+}

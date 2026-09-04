@@ -1,0 +1,29 @@
+uuid: 73589917-db1b-4a42-9e5c-752804062aeb
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_accueil:6bc80a0f-c105-4d1c-9ff9-efc99fe0049d'
+  module:
+    - block_content
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_contact_accueil
+theme: ambassade_theme
+region: contact_block
+weight: 0
+provider: null
+plugin: 'block_content:6bc80a0f-c105-4d1c-9ff9-efc99fe0049d'
+settings:
+  id: 'block_content:6bc80a0f-c105-4d1c-9ff9-efc99fe0049d'
+  label: Contact
+  label_display: '1'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

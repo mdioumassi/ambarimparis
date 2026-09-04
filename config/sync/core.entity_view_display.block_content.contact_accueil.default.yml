@@ -1,0 +1,45 @@
+uuid: 84cb6896-669c-45c7-bd0f-df5540a51ea4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_accueil
+    - field.field.block_content.contact_accueil.field_carte_placeholder
+    - field.field.block_content.contact_accueil.field_texte
+    - field.field.block_content.contact_accueil.field_webform
+  module:
+    - text
+    - webform
+id: block_content.contact_accueil.default
+targetEntityType: block_content
+bundle: contact_accueil
+mode: default
+content:
+  field_carte_placeholder:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_texte:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

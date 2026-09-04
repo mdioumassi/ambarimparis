@@ -1,0 +1,22 @@
+uuid: cc9b01e6-0844-499e-8d6a-685fe0d49a22
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_accueil
+    - field.storage.block_content.field_texte
+  module:
+    - text
+id: block_content.contact_accueil.field_texte
+field_name: field_texte
+entity_type: block_content
+bundle: contact_accueil
+label: 'Horaires et adresse'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,26 @@
+uuid: 77d57c4b-36b7-47da-9db8-e008bb858c55
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.acces_rapides
+    - field.field.block_content.acces_rapides.field_grille
+  module:
+    - entity_reference_revisions
+id: block_content.acces_rapides.default
+targetEntityType: block_content
+bundle: acces_rapides
+mode: default
+content:
+  field_grille:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

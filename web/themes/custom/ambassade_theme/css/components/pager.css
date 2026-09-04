@@ -1,0 +1,51 @@
+/**
+ * Composant : pagination (BEM sur les classes natives `.pager__*`).
+ * Cibles tactiles ≥ 44px, focus visible hérité de base.css.
+ */
+
+.pager {
+  margin-block-start: var(--space-6);
+}
+
+.pager__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pager__item {
+  display: flex;
+}
+
+.pager__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap-target-min);
+  min-height: var(--tap-target-min);
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+}
+
+.pager__item a:hover {
+  background-color: var(--color-surface);
+}
+
+.pager__item.is-active a {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.pager__item--ellipsis {
+  display: flex;
+  align-items: center;
+  padding-inline: var(--space-1);
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,8 @@
+uuid: 4d0ff62a-682a-41ba-8371-8248423d0cc6
+langcode: fr
+status: true
+dependencies: {  }
+id: basic
+label: 'Bloc simple (texte libre)'
+revision: true
+description: null

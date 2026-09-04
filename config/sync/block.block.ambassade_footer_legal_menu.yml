@@ -1,0 +1,25 @@
+uuid: 1bfcdc65-0506-41e8-bc95-bf93a273f643
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.footer-legal
+  module:
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_footer_legal_menu
+theme: ambassade_theme
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-legal'
+settings:
+  id: 'system_menu_block:footer-legal'
+  label: Mentions
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

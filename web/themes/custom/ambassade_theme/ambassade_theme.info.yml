@@ -1,0 +1,41 @@
+name: 'Ambassade Theme'
+type: theme
+description: 'Thème institutionnel sur mesure pour le site de l''Ambassade de Mauritanie en France (FR/AR, RGAA 4.1 AA).'
+package: Ambassade
+'base theme': false
+hidden: false
+core_version_requirement: ^11
+libraries:
+  - ambassade_theme/tokens
+  - ambassade_theme/base
+  - ambassade_theme/components
+  - ambassade_theme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - ambassade_theme/user
+  core/drupal.dropbutton:
+    - ambassade_theme/dropbutton
+  core/drupal.dialog:
+    - ambassade_theme/dialog
+  file/drupal.file:
+    - ambassade_theme/file
+  core/drupal.item-list:
+    - ambassade_theme/item-list
+  core/drupal.progress:
+    - ambassade_theme/progress
+  core/drupal.tablesort:
+    - ambassade_theme/drupal.tablesort
+regions:
+  header: 'En-tête'
+  primary_menu: 'Menu principal'
+  breadcrumb: "Fil d'Ariane"
+  highlighted: 'Alertes et messages'
+  hero: 'Hero (page d''accueil)'
+  quick_access: 'Accès rapides (page d''accueil)'
+  content: 'Contenu'
+  sidebar_first: 'Barre latérale'
+  contact_block: 'Bloc contact (page d''accueil)'
+  footer_top: 'Pied de page — liens'
+  footer_bottom: 'Pied de page — mentions'
+  help: 'Aide'

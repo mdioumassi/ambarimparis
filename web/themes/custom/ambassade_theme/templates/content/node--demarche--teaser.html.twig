@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Carte "démarche" (liste des démarches).
+ */
+#}
+<div{{ attributes.addClass('card', 'card--demarche') }}>
+  <div class="card__body">
+    {% if content.field_service|render %}
+      <span class="card__eyebrow">{{ content.field_service }}</span>
+    {% endif %}
+    <h3 class="card__title">
+      <a href="{{ url }}">{{ label }}</a>
+    </h3>
+    {% if content.field_public_concerne|render %}
+      <div class="card__excerpt">{{ content.field_public_concerne }}</div>
+    {% endif %}
+    {% if content.field_delais|render %}
+      <div class="card__meta">
+        <span>
+          <svg class="button__icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>
+          {{ content.field_delais }}
+        </span>
+      </div>
+    {% endif %}
+  </div>
+</div>

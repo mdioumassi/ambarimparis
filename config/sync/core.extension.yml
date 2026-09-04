@@ -5,6 +5,7 @@ module:
   admin_toolbar_tools: 0
   antibot: 0
   block: 0
+  block_content: 0
   breakpoint: 0
   ckeditor5: 0
   config: 0
@@ -20,6 +21,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  help: 0
   honeypot: 0
   image: 0
   inline_entity_form: 0
@@ -28,6 +30,8 @@ module:
   locale: 0
   media: 0
   media_library: 0
+  menu_link_content: 0
+  menu_ui: 0
   metatag: 0
   mysql: 0
   node: 0
@@ -64,4 +68,5 @@ module:
 theme:
   stark: 0
   claro: 0
+  ambassade_theme: 0
 profile: minimal

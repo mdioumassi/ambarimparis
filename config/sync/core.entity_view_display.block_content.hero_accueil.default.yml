@@ -1,0 +1,35 @@
+uuid: ddfb5369-44cf-46bc-a1a4-103e8915272c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_accueil
+    - field.field.block_content.hero_accueil.field_actions
+    - field.field.block_content.hero_accueil.field_texte_intro
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.hero_accueil.default
+targetEntityType: block_content
+bundle: hero_accueil
+mode: default
+content:
+  field_actions:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: hero_action
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_texte_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

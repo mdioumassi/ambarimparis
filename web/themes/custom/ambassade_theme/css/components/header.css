@@ -1,0 +1,172 @@
+/**
+ * Composant : en-tête du site (BEM).
+ * Le menu principal est masqué en dessous de 1024px et remplacé par un
+ * panneau accessible piloté par le bouton burger (voir js/nav.js).
+ */
+
+.site-header {
+  border-block-end: var(--border-width) solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+}
+
+.site-header__branding {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.site-logo img {
+  display: block;
+  block-size: 48px;
+  width: auto;
+}
+
+.site-name a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-tight);
+}
+
+.site-slogan {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.site-header__utility {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* --- Sélecteur de langue ------------------------------------------------ */
+.language-switcher-language-url {
+  font-size: var(--font-size-sm);
+}
+
+.language-switcher-language-url ul {
+  display: flex;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.language-switcher-language-url a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap-target-min);
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+}
+
+.language-switcher-language-url a.is-active,
+.language-switcher-language-url a[aria-current] {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* --- Bouton burger (mobile) ---------------------------------------------- */
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--tap-target-min);
+  block-size: var(--tap-target-min);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-background);
+  cursor: pointer;
+}
+
+.nav-toggle__icon {
+  inline-size: 1.5em;
+  block-size: 1.5em;
+  fill: currentColor;
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__icon--open {
+  display: none;
+}
+
+.nav-toggle:not([aria-expanded='true']) .nav-toggle__icon--close {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* --- Menu principal -------------------------------------------------------- */
+.site-header .block-menu {
+  border-block-start: var(--border-width) solid var(--color-border);
+}
+
+.site-header .block-menu .menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: var(--space-2) 0;
+  list-style: none;
+}
+
+.site-header .block-menu .menu a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-target-min);
+  padding-inline: var(--gutter);
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+}
+
+.site-header .block-menu .menu a:hover,
+.site-header .block-menu .menu a[aria-current] {
+  color: var(--color-primary);
+}
+
+/* Panneau mobile masqué par défaut ; ouvert via [data-nav-open]. */
+.site-header .block-menu {
+  display: none;
+}
+
+.site-header[data-nav-open] .block-menu {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+  }
+
+  .site-header .block-menu {
+    display: block;
+    border-block-start: none;
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .site-header .block-menu .menu {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .site-header .block-menu .menu a {
+    padding-inline: var(--space-3);
+  }
+}

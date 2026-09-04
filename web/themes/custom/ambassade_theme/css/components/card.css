@@ -1,0 +1,167 @@
+/**
+ * Composant : carte (BEM).
+ * Variantes : .card--demarche, .card--actualite, .card--simple (grille de
+ * cartes générique). Grilles associées : .card-grid.
+ */
+
+.card-grid,
+.view-id-demarches .view-content,
+.view-id-actualites .view-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+/* Les wrappers de champ générés par Drupal ne doivent pas casser la grille. */
+.card-grid > .field,
+.card-grid > .field > .field__items,
+.card-grid > .field > .field__item,
+.hero .field--name-field-actions > .field__item {
+  display: contents;
+}
+
+.view-id-demarches .view-content > .views-row,
+.view-id-actualites .view-content > .views-row {
+  display: contents;
+}
+
+@media (min-width: 768px) {
+  .card-grid,
+  .view-id-demarches .view-content,
+  .view-id-actualites .view-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid,
+  .view-id-demarches .view-content,
+  .view-id-actualites .view-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-5);
+}
+
+.card__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-block-end: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card__title {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-tight);
+}
+
+.card__title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.card__title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.card {
+  position: relative;
+}
+
+.card__title a:hover {
+  color: var(--color-primary);
+}
+
+.card__excerpt {
+  margin: 0 0 var(--space-4);
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-block-start: auto;
+  padding-block-start: var(--space-3);
+  border-block-start: var(--border-width) solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.card--demarche .card__eyebrow {
+  color: var(--color-green-700);
+}
+
+.card--actualite .card__eyebrow {
+  color: var(--color-info-700);
+}
+
+/* --- Mise en avant (paragraphe) ---------------------------------------- */
+.highlight {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  margin-block-end: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-green-50);
+}
+
+@media (min-width: 768px) {
+  .highlight {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.highlight__media img {
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+.highlight__title {
+  margin-block-start: 0;
+}
