@@ -1,0 +1,30 @@
+uuid: af4e2aaf-d78a-440c-a4d0-7e9451cba5a4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.actualites
+  module:
+    - system
+    - views
+  theme:
+    - ambassade_theme
+id: ambassade_actualites_accueil
+theme: ambassade_theme
+region: news
+weight: 0
+provider: null
+plugin: 'views_block:actualites-block_1'
+settings:
+  id: 'views_block:actualites-block_1'
+  label: 'Actualités & communiqués'
+  label_display: '1'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

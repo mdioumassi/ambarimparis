@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - core.entity_view_mode.node.teaser
-    - field.storage.node.field_date_publication
+    - node.type.actualite
+    - system.menu.main
   module:
+    - datetime
     - node
     - user
 id: actualites
@@ -193,6 +195,35 @@ display:
       contexts:
         - 'languages:language_interface'
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_1:
+    id: block_1
+    display_title: 'Bloc accueil'
+    display_plugin: block
+    position: 3
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      defaults:
+        pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+      use_more: true
+      use_more_always: true
+      use_more_text: 'Toutes les actualités'
+      link_display: page_1
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
