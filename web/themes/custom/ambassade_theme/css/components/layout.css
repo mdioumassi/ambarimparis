@@ -40,15 +40,3 @@
 .section-title {
   margin-block-end: var(--space-5);
 }
-
-/* Le hero porte déjà le message d'accueil : le H1 "Accueil" reste dans le
-   DOM pour la structure de titres/SEO mais n'est pas dupliqué visuellement. */
-.path-frontpage #block-ambassade-page-title {
-  position: absolute;
-  overflow: hidden;
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  white-space: nowrap;
-  margin: -1px;
-}

@@ -2,6 +2,8 @@ uuid: 87f5035f-4ca3-470d-8ab2-8591b8626cf5
 langcode: fr
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - ambassade_theme
 id: ambassade_page_title
@@ -15,4 +17,9 @@ settings:
   label: 'Titre de la page'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'
