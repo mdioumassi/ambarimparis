@@ -1,0 +1,65 @@
+uuid: 248ae487-e0cd-44b5-97d0-48d667a832b3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.alerte.field_date_debut
+    - field.field.node.alerte.field_date_fin
+    - field.field.node.alerte.field_message
+    - field.field.node.alerte.field_niveau
+    - node.type.alerte
+  module:
+    - datetime
+    - options
+    - text
+    - user
+id: node.alerte.default
+targetEntityType: node
+bundle: alerte
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_date_debut:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_date_fin:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_message:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_niveau:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

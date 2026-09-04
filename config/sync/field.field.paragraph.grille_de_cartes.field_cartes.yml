@@ -1,0 +1,28 @@
+uuid: 66576570-8982-4ea8-80d9-a13f46687842
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cartes
+    - paragraphs.paragraphs_type.carte
+    - paragraphs.paragraphs_type.grille_de_cartes
+  module:
+    - entity_reference_revisions
+id: paragraph.grille_de_cartes.field_cartes
+field_name: field_cartes
+entity_type: paragraph
+bundle: grille_de_cartes
+label: Cartes
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      carte: carte
+    negate: 0
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions

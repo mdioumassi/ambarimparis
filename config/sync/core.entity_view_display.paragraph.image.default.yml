@@ -1,0 +1,17 @@
+uuid: 25695530-3c2f-4aaf-b188-c99ea810fb2c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image.field_legende
+    - field.field.paragraph.image.field_media_image_ref
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.default
+targetEntityType: paragraph
+bundle: image
+mode: default
+content: {  }
+hidden:
+  field_legende: true
+  field_media_image_ref: true
+  search_api_excerpt: true

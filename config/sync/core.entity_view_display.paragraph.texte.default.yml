@@ -1,0 +1,15 @@
+uuid: dfb19794-91df-49be-9698-55dd5b66da61
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texte.field_texte
+    - paragraphs.paragraphs_type.texte
+id: paragraph.texte.default
+targetEntityType: paragraph
+bundle: texte
+mode: default
+content: {  }
+hidden:
+  field_texte: true
+  search_api_excerpt: true

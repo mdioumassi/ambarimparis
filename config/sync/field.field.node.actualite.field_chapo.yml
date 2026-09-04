@@ -1,0 +1,22 @@
+uuid: b7c1c95a-d560-453c-a39a-414c46ddeb0f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapo
+    - node.type.actualite
+  module:
+    - text
+id: node.actualite.field_chapo
+field_name: field_chapo
+entity_type: node
+bundle: actualite
+label: Chapô
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

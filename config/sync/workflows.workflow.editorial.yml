@@ -2,6 +2,11 @@ uuid: d5d50b14-56db-4e68-ae92-1e329cde00d7
 langcode: fr
 status: true
 dependencies:
+  config:
+    - node.type.actualite
+    - node.type.alerte
+    - node.type.demarche
+    - node.type.page
   module:
     - content_moderation
 id: editorial
@@ -48,5 +53,10 @@ type_settings:
         - review
       to: review
       weight: 1
-  entity_types: {  }
+  entity_types:
+    node:
+      - demarche
+      - actualite
+      - page
+      - alerte
   default_moderation_state: draft

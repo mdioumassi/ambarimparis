@@ -1,0 +1,24 @@
+uuid: 4008e65f-89ee-4cf2-8a0a-7baee6e84db8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.mise_en_avant
+id: paragraph.mise_en_avant.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: mise_en_avant
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

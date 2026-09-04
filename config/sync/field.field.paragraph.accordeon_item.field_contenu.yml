@@ -1,0 +1,22 @@
+uuid: 46848a10-132d-4dd8-96f3-bf7df12e8bba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contenu
+    - paragraphs.paragraphs_type.accordeon_item
+  module:
+    - text
+id: paragraph.accordeon_item.field_contenu
+field_name: field_contenu
+entity_type: paragraph
+bundle: accordeon_item
+label: Contenu
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

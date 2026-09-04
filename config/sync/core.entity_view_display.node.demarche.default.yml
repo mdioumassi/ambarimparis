@@ -1,0 +1,101 @@
+uuid: a5d8296a-748e-4ed1-ae71-f3ed98cb4468
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.demarche.field_delais
+    - field.field.node.demarche.field_faq
+    - field.field.node.demarche.field_formulaires
+    - field.field.node.demarche.field_modalites
+    - field.field.node.demarche.field_pieces_a_fournir
+    - field.field.node.demarche.field_public_concerne
+    - field.field.node.demarche.field_service
+    - field.field.node.demarche.field_tarifs
+    - node.type.demarche
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.demarche.default
+targetEntityType: node
+bundle: demarche
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_delais:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_faq:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_formulaires:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_modalites:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_pieces_a_fournir:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_public_concerne:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_service:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_tarifs:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

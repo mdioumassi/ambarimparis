@@ -1,0 +1,21 @@
+uuid: 9b66715b-75b0-463f-8a99-288173bdaa36
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carte.field_image
+    - field.field.paragraph.carte.field_lien
+    - field.field.paragraph.carte.field_texte_court
+    - field.field.paragraph.carte.field_titre
+    - paragraphs.paragraphs_type.carte
+id: paragraph.carte.default
+targetEntityType: paragraph
+bundle: carte
+mode: default
+content: {  }
+hidden:
+  field_image: true
+  field_lien: true
+  field_texte_court: true
+  field_titre: true
+  search_api_excerpt: true

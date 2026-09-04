@@ -1,0 +1,35 @@
+uuid: d802ea7f-ab3e-431f-b878-38733f829166
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.actualite.field_chapo
+    - field.field.node.actualite.field_date_publication
+    - field.field.node.actualite.field_image
+    - field.field.node.actualite.field_type_actualite
+    - node.type.actualite
+  module:
+    - user
+id: node.actualite.teaser
+targetEntityType: node
+bundle: actualite
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_chapo: true
+  field_date_publication: true
+  field_image: true
+  field_type_actualite: true
+  langcode: true
+  search_api_excerpt: true

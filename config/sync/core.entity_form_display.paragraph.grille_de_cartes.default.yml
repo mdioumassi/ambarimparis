@@ -1,0 +1,16 @@
+uuid: be18401c-d3e5-4fd7-b791-cfb692d372b9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grille_de_cartes.field_cartes
+    - paragraphs.paragraphs_type.grille_de_cartes
+id: paragraph.grille_de_cartes.default
+targetEntityType: paragraph
+bundle: grille_de_cartes
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_cartes: true
+  status: true

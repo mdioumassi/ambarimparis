@@ -2,9 +2,12 @@ uuid: bf50722d-59ba-4967-9780-f231a5c7fefd
 langcode: fr
 status: true
 dependencies:
+  config:
+    - search_api_autocomplete.search.views_recherche
   module:
     - eu_cookie_compliance
     - media
+    - search_api_autocomplete
     - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
@@ -15,4 +18,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'display eu cookie compliance popup'
+  - 'use search_api_autocomplete for views_recherche'
   - 'view media'

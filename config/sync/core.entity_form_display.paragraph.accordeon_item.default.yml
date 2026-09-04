@@ -1,0 +1,18 @@
+uuid: 5c3cc938-deae-4fb5-a0f7-eb389d5db9d5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordeon_item.field_contenu
+    - field.field.paragraph.accordeon_item.field_titre
+    - paragraphs.paragraphs_type.accordeon_item
+id: paragraph.accordeon_item.default
+targetEntityType: paragraph
+bundle: accordeon_item
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_contenu: true
+  field_titre: true
+  status: true

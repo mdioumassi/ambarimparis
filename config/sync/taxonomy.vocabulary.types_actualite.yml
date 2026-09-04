@@ -1,0 +1,9 @@
+uuid: bf4668ac-cb4f-483a-812f-b310e14050ae
+langcode: fr
+status: true
+dependencies: {  }
+name: "Types d'actualité"
+vid: types_actualite
+description: null
+weight: 0
+new_revision: false

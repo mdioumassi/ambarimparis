@@ -1,0 +1,16 @@
+uuid: edf0296c-5149-4e19-bcfc-4586af767586
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.services
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.services
+target_entity_type_id: taxonomy_term
+target_bundle: services
+default_langcode: fr
+language_alterable: true

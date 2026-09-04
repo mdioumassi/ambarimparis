@@ -1,0 +1,24 @@
+uuid: 08527037-9b46-4e50-a65d-632cb6a0801f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_actualite
+    - node.type.actualite
+    - taxonomy.vocabulary.types_actualite
+id: node.actualite.field_type_actualite
+field_name: field_type_actualite
+entity_type: node
+bundle: actualite
+label: Type
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      types_actualite: types_actualite
+field_type: entity_reference

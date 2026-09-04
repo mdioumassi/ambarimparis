@@ -1,0 +1,17 @@
+uuid: 74d6d5ea-27cd-41c4-9133-a5f5e813fab2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question_reponse.field_question
+    - field.field.paragraph.question_reponse.field_reponse
+    - paragraphs.paragraphs_type.question_reponse
+id: paragraph.question_reponse.default
+targetEntityType: paragraph
+bundle: question_reponse
+mode: default
+content: {  }
+hidden:
+  field_question: true
+  field_reponse: true
+  search_api_excerpt: true

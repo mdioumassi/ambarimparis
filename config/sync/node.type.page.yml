@@ -1,0 +1,11 @@
+uuid: bbe1a486-3687-4cca-9cc9-5b9c58a36fdb
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Page éditoriale'
+type: page
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

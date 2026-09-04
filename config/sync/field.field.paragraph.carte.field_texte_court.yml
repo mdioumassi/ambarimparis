@@ -1,0 +1,22 @@
+uuid: 35183686-47cc-4db1-babd-5c15715f092b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texte_court
+    - paragraphs.paragraphs_type.carte
+  module:
+    - text
+id: paragraph.carte.field_texte_court
+field_name: field_texte_court
+entity_type: paragraph
+bundle: carte
+label: Texte
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

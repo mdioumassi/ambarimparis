@@ -1,0 +1,21 @@
+uuid: 7f0321bc-54f3-451e-82fc-3e00fbf587ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_niveau
+    - node.type.alerte
+  module:
+    - options
+id: node.alerte.field_niveau
+field_name: field_niveau
+entity_type: node
+bundle: alerte
+label: Niveau
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

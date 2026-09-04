@@ -1,0 +1,16 @@
+uuid: 9d443fcc-c078-483c-a50a-90b7003421d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.types_actualite
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.types_actualite
+target_entity_type_id: taxonomy_term
+target_bundle: types_actualite
+default_langcode: fr
+language_alterable: true

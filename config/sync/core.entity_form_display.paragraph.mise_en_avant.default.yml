@@ -1,0 +1,22 @@
+uuid: 98bb756f-d88d-4d94-8c8f-584072d6b939
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mise_en_avant.field_image
+    - field.field.paragraph.mise_en_avant.field_lien
+    - field.field.paragraph.mise_en_avant.field_texte_court
+    - field.field.paragraph.mise_en_avant.field_titre
+    - paragraphs.paragraphs_type.mise_en_avant
+id: paragraph.mise_en_avant.default
+targetEntityType: paragraph
+bundle: mise_en_avant
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_image: true
+  field_lien: true
+  field_texte_court: true
+  field_titre: true
+  status: true

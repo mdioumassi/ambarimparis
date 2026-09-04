@@ -1,0 +1,22 @@
+uuid: 35a9b0af-030c-4ff7-a93d-508de8216761
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarifs
+    - node.type.demarche
+  module:
+    - text
+id: node.demarche.field_tarifs
+field_name: field_tarifs
+entity_type: node
+bundle: demarche
+label: Tarifs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

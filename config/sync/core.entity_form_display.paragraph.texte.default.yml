@@ -1,0 +1,16 @@
+uuid: b2110813-86b6-48a0-9cd4-af0fdbe0bc08
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texte.field_texte
+    - paragraphs.paragraphs_type.texte
+id: paragraph.texte.default
+targetEntityType: paragraph
+bundle: texte
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_texte: true
+  status: true

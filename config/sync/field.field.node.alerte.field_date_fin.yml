@@ -1,0 +1,21 @@
+uuid: fbd6de05-9545-451f-8b60-6f58898c7a6f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_fin
+    - node.type.alerte
+  module:
+    - datetime
+id: node.alerte.field_date_fin
+field_name: field_date_fin
+entity_type: node
+bundle: alerte
+label: 'Date de fin'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

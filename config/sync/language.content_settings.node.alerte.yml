@@ -1,0 +1,16 @@
+uuid: 03841289-9bc0-4ae7-b607-a01203a3abea
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.alerte
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.alerte
+target_entity_type_id: node
+target_bundle: alerte
+default_langcode: fr
+language_alterable: true

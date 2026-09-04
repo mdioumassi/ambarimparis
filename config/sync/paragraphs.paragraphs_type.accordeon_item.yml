@@ -1,0 +1,10 @@
+uuid: c91e6853-5e0b-4e7c-af4f-fe16876ee404
+langcode: fr
+status: true
+dependencies: {  }
+id: accordeon_item
+label: "Élément d'accordéon"
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }
