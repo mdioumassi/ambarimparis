@@ -47,9 +47,9 @@
 }
 
 .alert-banner--important {
-  background-color: var(--color-gold-100);
-  border-color: var(--color-gold-600);
-  color: var(--color-ink-900);
+  background-color: var(--color-accent);
+  border-color: transparent;
+  color: var(--color-accent-contrast);
 }
 
 .alert-banner--urgent {
