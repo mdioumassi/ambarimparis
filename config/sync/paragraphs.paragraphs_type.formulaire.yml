@@ -1,0 +1,10 @@
+uuid: 3d68cebc-9a5b-4365-bdf3-8b27d3244228
+langcode: fr
+status: true
+dependencies: {  }
+id: formulaire
+label: Formulaire
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

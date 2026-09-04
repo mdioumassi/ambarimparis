@@ -1,0 +1,25 @@
+uuid: cfb2388c-0394-4471-93bf-03b7fa50e475
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.formulaire.field_webform
+    - paragraphs.paragraphs_type.formulaire
+  module:
+    - webform
+id: paragraph.formulaire.default
+targetEntityType: paragraph
+bundle: formulaire
+mode: default
+content:
+  field_webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
