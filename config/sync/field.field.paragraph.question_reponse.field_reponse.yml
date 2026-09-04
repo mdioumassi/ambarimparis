@@ -1,0 +1,22 @@
+uuid: 313cdfb5-8693-430b-acd8-864bdd41931a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reponse
+    - paragraphs.paragraphs_type.question_reponse
+  module:
+    - text
+id: paragraph.question_reponse.field_reponse
+field_name: field_reponse
+entity_type: paragraph
+bundle: question_reponse
+label: Réponse
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

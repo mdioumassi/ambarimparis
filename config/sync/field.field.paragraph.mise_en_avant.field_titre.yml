@@ -1,0 +1,19 @@
+uuid: 46f1cbfe-db34-4645-b5d7-15ed1aabd92c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titre
+    - paragraphs.paragraphs_type.mise_en_avant
+id: paragraph.mise_en_avant.field_titre
+field_name: field_titre
+entity_type: paragraph
+bundle: mise_en_avant
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

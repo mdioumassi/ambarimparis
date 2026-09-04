@@ -1,0 +1,19 @@
+uuid: 5a3cbede-7329-4c8f-a744-840f2213c9e7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_reponse
+field_name: field_reponse
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

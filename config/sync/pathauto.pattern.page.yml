@@ -1,0 +1,23 @@
+uuid: 6e92bac9-be18-4582-abcf-fdaf1e26cf67
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - node
+id: page
+label: 'Page éditoriale'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  node_bundle:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+selection_logic: and
+weight: 0
+relationships: {  }

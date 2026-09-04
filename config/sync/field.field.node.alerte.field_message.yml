@@ -1,0 +1,22 @@
+uuid: 82b91f1c-63d6-4483-b807-cd0f78506f0d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_message
+    - node.type.alerte
+  module:
+    - text
+id: node.alerte.field_message
+field_name: field_message
+entity_type: node
+bundle: alerte
+label: Message
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

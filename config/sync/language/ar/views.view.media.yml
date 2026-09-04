@@ -21,6 +21,7 @@ display:
         status:
           label: الحالة
           settings:
+            format_custom_false: 'غير منشور'
             format_custom_true: منشور
           separator: ', '
         changed:
@@ -52,6 +53,8 @@ display:
             group_items:
               1:
                 title: منشور
+              2:
+                title: 'غير منشور'
         langcode:
           expose:
             label: اللغة

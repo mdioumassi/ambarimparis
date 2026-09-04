@@ -1,0 +1,22 @@
+uuid: b73cd7ad-0f78-47c5-88f1-90cde06846ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carte.field_image
+    - field.field.paragraph.carte.field_lien
+    - field.field.paragraph.carte.field_texte_court
+    - field.field.paragraph.carte.field_titre
+    - paragraphs.paragraphs_type.carte
+id: paragraph.carte.default
+targetEntityType: paragraph
+bundle: carte
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_image: true
+  field_lien: true
+  field_texte_court: true
+  field_titre: true
+  status: true

@@ -1,0 +1,22 @@
+uuid: 95ddf615-ce06-4128-9f8a-4026746f557c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modalites
+    - node.type.demarche
+  module:
+    - text
+id: node.demarche.field_modalites
+field_name: field_modalites
+entity_type: node
+bundle: demarche
+label: 'Modalités de dépôt / retrait'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

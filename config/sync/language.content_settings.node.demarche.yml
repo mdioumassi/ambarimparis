@@ -1,0 +1,16 @@
+uuid: 794e1e1e-e985-4c66-9128-1813288bc26e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.demarche
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.demarche
+target_entity_type_id: node
+target_bundle: demarche
+default_langcode: fr
+language_alterable: true

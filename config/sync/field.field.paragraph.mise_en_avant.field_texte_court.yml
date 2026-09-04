@@ -1,0 +1,22 @@
+uuid: 1474e1c5-dc85-4be0-8384-ddcd700ad4d0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texte_court
+    - paragraphs.paragraphs_type.mise_en_avant
+  module:
+    - text
+id: paragraph.mise_en_avant.field_texte_court
+field_name: field_texte_court
+entity_type: paragraph
+bundle: mise_en_avant
+label: Texte
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

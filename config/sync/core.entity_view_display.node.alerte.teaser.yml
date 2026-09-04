@@ -1,0 +1,35 @@
+uuid: 0ccd3234-e962-4f30-b927-fd5bf614ee90
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.alerte.field_date_debut
+    - field.field.node.alerte.field_date_fin
+    - field.field.node.alerte.field_message
+    - field.field.node.alerte.field_niveau
+    - node.type.alerte
+  module:
+    - user
+id: node.alerte.teaser
+targetEntityType: node
+bundle: alerte
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date_debut: true
+  field_date_fin: true
+  field_message: true
+  field_niveau: true
+  langcode: true
+  search_api_excerpt: true

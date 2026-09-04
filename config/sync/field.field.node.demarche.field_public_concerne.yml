@@ -1,0 +1,22 @@
+uuid: 3cf11032-b08d-4e9c-aa37-eaf7b83b7751
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_concerne
+    - node.type.demarche
+  module:
+    - text
+id: node.demarche.field_public_concerne
+field_name: field_public_concerne
+entity_type: node
+bundle: demarche
+label: 'Public concerné'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

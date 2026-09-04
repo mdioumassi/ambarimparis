@@ -1,0 +1,28 @@
+uuid: 03bce21b-dc02-49c0-8b20-529a445c809c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq
+    - node.type.demarche
+    - paragraphs.paragraphs_type.question_reponse
+  module:
+    - entity_reference_revisions
+id: node.demarche.field_faq
+field_name: field_faq
+entity_type: node
+bundle: demarche
+label: 'Foire aux questions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      question_reponse: question_reponse
+    negate: 0
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions

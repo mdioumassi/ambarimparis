@@ -1,0 +1,9 @@
+uuid: c5deb05d-8af8-4f5b-90fe-932f34007568
+langcode: fr
+status: true
+dependencies: {  }
+name: Services
+vid: services
+description: null
+weight: 0
+new_revision: false

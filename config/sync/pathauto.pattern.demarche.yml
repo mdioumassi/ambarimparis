@@ -1,0 +1,23 @@
+uuid: 234c84cb-afba-4dca-82cd-f4d216153af6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.demarche
+  module:
+    - node
+id: demarche
+label: 'Démarche consulaire'
+type: 'canonical_entities:node'
+pattern: '/demarches/[node:title]'
+selection_criteria:
+  node_bundle:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      demarche: demarche
+selection_logic: and
+weight: 0
+relationships: {  }

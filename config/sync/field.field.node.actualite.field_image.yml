@@ -1,0 +1,24 @@
+uuid: ead5adb6-46be-4758-a903-9e9594d73138
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.actualite
+id: node.actualite.field_image
+field_name: field_image
+entity_type: node
+bundle: actualite
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

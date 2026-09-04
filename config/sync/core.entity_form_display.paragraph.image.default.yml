@@ -1,0 +1,18 @@
+uuid: ab9fab41-f296-4e9e-8a96-28d6eb665fa7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image.field_legende
+    - field.field.paragraph.image.field_media_image_ref
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.default
+targetEntityType: paragraph
+bundle: image
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_legende: true
+  field_media_image_ref: true
+  status: true

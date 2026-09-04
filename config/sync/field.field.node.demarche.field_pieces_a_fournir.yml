@@ -1,0 +1,19 @@
+uuid: 92298866-d8e0-4bd3-a832-b8a7f88d155e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pieces_a_fournir
+    - node.type.demarche
+id: node.demarche.field_pieces_a_fournir
+field_name: field_pieces_a_fournir
+entity_type: node
+bundle: demarche
+label: 'Pièces à fournir'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

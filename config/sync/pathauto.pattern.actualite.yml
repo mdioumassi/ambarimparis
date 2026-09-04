@@ -1,0 +1,23 @@
+uuid: 7028673e-8f4a-4b1e-b540-2588f53895b5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.actualite
+  module:
+    - node
+id: actualite
+label: Actualité
+type: 'canonical_entities:node'
+pattern: '/actualites/[node:title]'
+selection_criteria:
+  node_bundle:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      actualite: actualite
+selection_logic: and
+weight: 0
+relationships: {  }

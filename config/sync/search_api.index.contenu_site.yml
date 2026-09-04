@@ -1,0 +1,108 @@
+uuid: ff5979df-21b3-40b6-8249-99323254b819
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_chapo
+    - field.storage.node.field_public_concerne
+    - search_api.server.database_server
+  module:
+    - node
+id: contenu_site
+name: 'Contenu du site'
+description: null
+read_only: false
+field_settings:
+  body:
+    label: Corps
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  created:
+    label: 'Créé le'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_chapo:
+    label: Chapô
+    datasource_id: 'entity:node'
+    property_path: field_chapo
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_chapo
+  field_public_concerne:
+    label: 'Public concerné'
+    datasource_id: 'entity:node'
+    property_path: field_public_concerne
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_public_concerne
+  langcode:
+    label: Langue
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  status:
+    label: Publié
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Titre
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: 5.0
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Type de contenu'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - actualite
+        - demarche
+        - page
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: database_server

@@ -1,0 +1,24 @@
+uuid: 1cc430ca-cb15-48a9-b954-a9c66c86284d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service
+    - node.type.demarche
+    - taxonomy.vocabulary.services
+id: node.demarche.field_service
+field_name: field_service
+entity_type: node
+bundle: demarche
+label: 'Service de rattachement'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      services: services
+field_type: entity_reference

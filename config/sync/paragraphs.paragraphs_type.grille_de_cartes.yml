@@ -1,0 +1,10 @@
+uuid: fffaa23f-27af-4ad6-ab8a-5d21ab34b048
+langcode: fr
+status: true
+dependencies: {  }
+id: grille_de_cartes
+label: 'Grille de cartes'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

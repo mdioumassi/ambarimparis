@@ -1,0 +1,21 @@
+uuid: 12464115-51cc-4e90-9c78-5d7013cedcfa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_publication
+    - node.type.actualite
+  module:
+    - datetime
+id: node.actualite.field_date_publication
+field_name: field_date_publication
+entity_type: node
+bundle: actualite
+label: 'Date de publication'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

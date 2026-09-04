@@ -1,0 +1,11 @@
+uuid: a914769a-1005-4dd3-88b9-cdc932ed910c
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Alerte consulaire'
+type: alerte
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

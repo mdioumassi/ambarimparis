@@ -1,0 +1,17 @@
+uuid: 2ffdbe7d-6a17-4fc2-af5a-36f315d0875f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: database_server
+name: 'Serveur base de données'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

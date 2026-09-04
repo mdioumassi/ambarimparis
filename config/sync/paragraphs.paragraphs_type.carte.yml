@@ -1,0 +1,10 @@
+uuid: b30a3db8-552e-426d-8594-171602e0faf2
+langcode: fr
+status: true
+dependencies: {  }
+id: carte
+label: Carte
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,30 @@
+uuid: 8b523a32-3462-4b88-8fa7-3b6adb100163
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_niveau
+field_name: field_niveau
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: info
+      label: Information
+    -
+      value: important
+      label: Important
+    -
+      value: urgent
+      label: Urgent
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

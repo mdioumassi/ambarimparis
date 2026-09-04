@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - filter.format.webform_default
+    - search_api_autocomplete.search.views_recherche
   module:
     - eu_cookie_compliance
     - filter
     - media
+    - search_api_autocomplete
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -18,5 +20,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'display eu cookie compliance popup'
+  - 'use search_api_autocomplete for views_recherche'
   - 'use text format webform_default'
   - 'view media'

@@ -1,0 +1,43 @@
+uuid: 4b7e846d-9726-436f-a2be-306d21c0a6e1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.demarche.field_delais
+    - field.field.node.demarche.field_faq
+    - field.field.node.demarche.field_formulaires
+    - field.field.node.demarche.field_modalites
+    - field.field.node.demarche.field_pieces_a_fournir
+    - field.field.node.demarche.field_public_concerne
+    - field.field.node.demarche.field_service
+    - field.field.node.demarche.field_tarifs
+    - node.type.demarche
+  module:
+    - user
+id: node.demarche.teaser
+targetEntityType: node
+bundle: demarche
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_delais: true
+  field_faq: true
+  field_formulaires: true
+  field_modalites: true
+  field_pieces_a_fournir: true
+  field_public_concerne: true
+  field_service: true
+  field_tarifs: true
+  langcode: true
+  search_api_excerpt: true

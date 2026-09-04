@@ -1,0 +1,19 @@
+uuid: 630bd00e-65c0-4236-9399-077401c99c3f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_tarifs
+field_name: field_tarifs
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

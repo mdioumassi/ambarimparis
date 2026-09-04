@@ -1,0 +1,11 @@
+uuid: dc86e5c4-9ae0-4489-a317-0aaf846a9ac8
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Démarche consulaire'
+type: demarche
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false
