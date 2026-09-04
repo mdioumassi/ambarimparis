@@ -19,6 +19,8 @@
   <div class="{{ is_hero ? '' : 'card__body' }}">
     {% if is_hero %}
       <svg class="hero__action-icon" aria-hidden="true"><use href="#icon-passport"></use></svg>
+    {% elseif not content.field_image|render %}
+      <svg class="card__icon" aria-hidden="true"><use href="#icon-document"></use></svg>
     {% endif %}
     <h3 class="{{ is_hero ? 'hero__action-title' : 'card__title' }}">
       {% if link_item %}

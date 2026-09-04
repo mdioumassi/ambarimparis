@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.acces_rapides
     - field.field.block_content.acces_rapides.field_grille
+    - field.field.block_content.acces_rapides.field_soustitre
   module:
     - entity_reference_revisions
 id: block_content.acces_rapides.default
@@ -20,6 +21,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_soustitre:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
     region: content
 hidden:
   langcode: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.acces_rapides
     - field.field.block_content.acces_rapides.field_grille
+    - field.field.block_content.acces_rapides.field_soustitre
   module:
     - paragraphs
 id: block_content.acces_rapides.default
@@ -29,6 +30,14 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_soustitre:
+    type: string_textfield
+    weight: 30
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   info:
     type: string_textfield

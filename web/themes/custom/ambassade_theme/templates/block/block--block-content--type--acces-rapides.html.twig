@@ -1,0 +1,14 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Section "Toutes vos démarches". Le H2 (label du bloc) reste rendu par
+ * block.html.twig ; seul le contenu (sous-titre + grille) est surchargé.
+ */
+#}
+{% block content %}
+  {% if block_content.field_soustitre.value %}
+    <p class="quick-access__subtitle">{{ block_content.field_soustitre.value }}</p>
+  {% endif %}
+  {{ content.field_grille }}
+{% endblock %}

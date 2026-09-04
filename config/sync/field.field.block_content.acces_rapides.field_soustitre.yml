@@ -1,0 +1,19 @@
+uuid: 4cb7bd42-e2c7-4d3a-8ad1-2cd659f46e65
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.acces_rapides
+    - field.storage.block_content.field_soustitre
+id: block_content.acces_rapides.field_soustitre
+field_name: field_soustitre
+entity_type: block_content
+bundle: acces_rapides
+label: Sous-titre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
