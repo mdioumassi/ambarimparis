@@ -1,0 +1,29 @@
+uuid: c2e652d8-995b-4d6d-8c33-f4415f5f2099
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.card_webp
+    - image.style.card_webp_small
+  theme:
+    - ambassade_theme
+id: card_responsive
+label: 'Carte (responsive, WebP)'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: card_webp
+    breakpoint_id: ambassade_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: card_webp
+    breakpoint_id: ambassade_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: card_webp_small
+    breakpoint_id: ambassade_theme.mobile
+    multiplier: 1x
+breakpoint_group: ambassade_theme
+fallback_image_style: card_webp

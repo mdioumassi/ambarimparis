@@ -1,0 +1,10 @@
+uuid: fd325924-40c2-486c-a0ca-d04d4f1c3307
+langcode: fr
+status: true
+dependencies: {  }
+id: node__page
+label: 'Contenu: Page éditoriale'
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:summary]'
+  og_title: '[node:title]'

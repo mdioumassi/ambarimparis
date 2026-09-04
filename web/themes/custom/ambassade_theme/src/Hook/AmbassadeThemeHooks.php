@@ -31,4 +31,21 @@ class AmbassadeThemeHooks {
     }
   }
 
+  /**
+   * Implements hook_preprocess_node().
+   *
+   * Exposes the site name so node templates can build correct JSON-LD
+   * structured data (NewsArticle publisher, etc.) without hardcoding it.
+   *
+   * @param array<string, mixed> $variables
+   *   The template variables.
+   */
+  #[Hook('preprocess_node')]
+  public function preprocessNode(array &$variables): void {
+    $variables['site_name'] = \Drupal::config('system.site')->get('name');
+    /** @var \Drupal\node\NodeInterface $node */
+    $node = $variables['node'];
+    $variables['canonical_url'] = $node->toUrl('canonical', ['absolute' => TRUE])->toString();
+  }
+
 }

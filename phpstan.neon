@@ -3,5 +3,14 @@ parameters:
   paths:
     - web/modules/custom
     - web/themes/custom
+    - scripts
   excludePaths:
     - '*/tests/fixtures/*'
+  ignoreErrors:
+    -
+      # Les classes de hooks Drupal 11 (attribut #[Hook]) sont instanciées
+      # directement par le mécanisme de découverte, sans passer par le
+      # conteneur de services : l'injection de dépendances n'y est pas
+      # disponible, contrairement aux services classiques.
+      identifier: globalDrupalDependencyInjection.useDependencyInjection
+      path: '*/src/Hook/*.php'

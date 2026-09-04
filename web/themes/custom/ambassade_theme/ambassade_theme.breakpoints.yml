@@ -1,0 +1,24 @@
+ambassade_theme.mobile:
+  label: mobile
+  mediaQuery: 'all and (min-width: 360px)'
+  weight: 0
+  multipliers:
+    - 1x
+ambassade_theme.tablet:
+  label: tablet
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+ambassade_theme.desktop:
+  label: desktop
+  mediaQuery: 'all and (min-width: 1024px)'
+  weight: 2
+  multipliers:
+    - 1x
+ambassade_theme.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1440px)'
+  weight: 3
+  multipliers:
+    - 1x

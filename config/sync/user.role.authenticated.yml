@@ -8,6 +8,7 @@ dependencies:
   module:
     - eu_cookie_compliance
     - filter
+    - matomo
     - media
     - search_api_autocomplete
     - system
@@ -20,6 +21,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'display eu cookie compliance popup'
+  - 'opt-in or out of matomo tracking'
   - 'use search_api_autocomplete for views_recherche'
   - 'use text format webform_default'
   - 'view media'

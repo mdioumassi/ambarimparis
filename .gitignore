@@ -8,9 +8,9 @@
 /drush/contrib/
 
 # Drupal scaffold files (managed by composer drupal/core-composer-scaffold)
+# (web/robots.txt is excluded from scaffolding and tracked, see composer.json)
 /web/autoload.php
 /web/index.php
-/web/robots.txt
 /web/update.php
 /web/web.config
 /web/.htaccess

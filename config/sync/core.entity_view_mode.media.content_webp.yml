@@ -1,0 +1,11 @@
+uuid: c30efa6e-a050-483c-bb25-da591a470633
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.content_webp
+label: 'Contenu (WebP)'
+description: null
+targetEntityType: media
+cache: true

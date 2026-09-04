@@ -1,0 +1,22 @@
+uuid: b13fee0b-bb40-4a2f-9e65-abc9270a81b8
+langcode: fr
+status: true
+dependencies: {  }
+name: card_webp
+label: 'Carte (WebP, 800×450)'
+effects:
+  c1e0226c-6058-40a8-b8e8-666d8abb170e:
+    uuid: c1e0226c-6058-40a8-b8e8-666d8abb170e
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 800
+      height: 450
+      anchor: center-center
+  c88490b4-dfa5-487c-bf6f-9fd48af47dd8:
+    uuid: c88490b4-dfa5-487c-bf6f-9fd48af47dd8
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+      quality: 82
