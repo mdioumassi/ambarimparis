@@ -1,0 +1,57 @@
+/**
+ * Composant : bandeau supérieur (BEM). Numéro d'urgence consulaire +
+ * sélecteur de langue. Masqué sur mobile hormis la langue (cf. media query).
+ */
+
+.topbar {
+  background-color: var(--color-ink-900);
+  color: var(--color-white);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.topbar__inner .block-basic p {
+  margin: 0;
+}
+
+.topbar__inner .block-basic {
+  min-height: var(--tap-target-min);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .topbar__inner .block-basic {
+    display: none;
+  }
+}
+
+.topbar .language-switcher-language-url ul {
+  display: flex;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topbar .language-switcher-language-url a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-target-min);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: var(--font-weight-normal);
+}
+
+.topbar .language-switcher-language-url a.is-active,
+.topbar .language-switcher-language-url a[aria-current] {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}

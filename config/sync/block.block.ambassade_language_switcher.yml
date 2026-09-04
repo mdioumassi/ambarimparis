@@ -8,8 +8,8 @@ dependencies:
     - ambassade_theme
 id: ambassade_language_switcher
 theme: ambassade_theme
-region: header
-weight: -5
+region: topbar
+weight: 0
 provider: null
 plugin: 'language_block:language_interface'
 settings:

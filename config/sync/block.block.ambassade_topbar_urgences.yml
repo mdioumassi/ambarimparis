@@ -1,0 +1,23 @@
+uuid: 87299d2c-d031-499a-a95b-a1a6fd15a555
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4c142630-2bfb-4aab-9e1c-b875cb9ea66f'
+  module:
+    - block_content
+  theme:
+    - ambassade_theme
+id: ambassade_topbar_urgences
+theme: ambassade_theme
+region: topbar
+weight: -10
+provider: null
+plugin: 'block_content:4c142630-2bfb-4aab-9e1c-b875cb9ea66f'
+settings:
+  id: 'block_content:4c142630-2bfb-4aab-9e1c-b875cb9ea66f'
+  label: 'Urgences consulaires'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }
