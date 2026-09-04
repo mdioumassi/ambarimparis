@@ -41,6 +41,13 @@
   }
 }
 
+@media (min-width: 1440px) {
+  .view-id-demarches .view-content,
+  .view-id-actualites .view-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;

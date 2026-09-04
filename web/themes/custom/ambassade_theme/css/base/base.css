@@ -111,3 +111,9 @@ textarea:focus-visible,
     --gutter: var(--space-6);
   }
 }
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--content-max-width-wide);
+  }
+}
