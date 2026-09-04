@@ -86,8 +86,10 @@
   --space-9: 6rem;
 
   /* --- Layout ---------------------------------------------------------- */
+  /* Points de rupture de référence : 360 / 768 / 1024 / 1440px. */
   --content-max-width: 76rem;
   --content-narrow-width: 46rem;
+  --content-max-width-wide: 88rem;
   --gutter: var(--space-4);
 
   /* --- Bordures / ombres / transitions --------------------------------- */

@@ -67,7 +67,7 @@
 .button--accent:hover {
   background-color: var(--color-gold-600);
   border-color: var(--color-gold-600);
-  color: var(--color-white);
+  color: var(--color-accent-contrast);
 }
 
 .button:disabled,
