@@ -10,14 +10,14 @@ dependencies:
     - ambassade_theme
 id: ambassade_footer_legal_menu
 theme: ambassade_theme
-region: footer_bottom
-weight: 0
+region: footer_top
+weight: 30
 provider: null
 plugin: 'system_menu_block:footer-legal'
 settings:
   id: 'system_menu_block:footer-legal'
-  label: Mentions
-  label_display: '0'
+  label: 'Informations légales'
+  label_display: '1'
   provider: system
   level: 1
   depth: null

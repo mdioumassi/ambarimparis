@@ -1,0 +1,23 @@
+uuid: 5587c5fd-049d-430b-a2bb-1e1cda2f61a4
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:699d834b-cc65-4010-9dcc-9f918f7f1188'
+  module:
+    - block_content
+  theme:
+    - ambassade_theme
+id: ambassade_footer_ambassade
+theme: ambassade_theme
+region: footer_top
+weight: 10
+provider: null
+plugin: 'block_content:699d834b-cc65-4010-9dcc-9f918f7f1188'
+settings:
+  id: 'block_content:699d834b-cc65-4010-9dcc-9f918f7f1188'
+  label: "L'Ambassade"
+  label_display: '1'
+  provider: block_content
+  view_mode: full
+visibility: {  }

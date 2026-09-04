@@ -1,0 +1,23 @@
+uuid: 280b3f28-3bcc-4a8b-b9dd-3265ada8ce05
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d71a93eb-39c4-41a8-90b4-063b079f1f00'
+  module:
+    - block_content
+  theme:
+    - ambassade_theme
+id: ambassade_footer_copyright
+theme: ambassade_theme
+region: footer_bottom
+weight: -10
+provider: null
+plugin: 'block_content:d71a93eb-39c4-41a8-90b4-063b079f1f00'
+settings:
+  id: 'block_content:d71a93eb-39c4-41a8-90b4-063b079f1f00'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

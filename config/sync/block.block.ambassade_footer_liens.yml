@@ -16,8 +16,8 @@ provider: null
 plugin: 'block_content:4ca579af-aca3-42cf-8ccc-674dfad3d681'
 settings:
   id: 'block_content:4ca579af-aca3-42cf-8ccc-674dfad3d681'
-  label: 'Liens officiels'
-  label_display: '0'
+  label: Démarches
+  label_display: '1'
   provider: block_content
   view_mode: full
 visibility: {  }

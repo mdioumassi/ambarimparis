@@ -11,13 +11,13 @@ dependencies:
 id: ambassade_footer_horaires
 theme: ambassade_theme
 region: footer_top
-weight: 0
+weight: 20
 provider: null
 plugin: 'block_content:6f6c7838-beb0-4640-b6aa-0fe90774a708'
 settings:
   id: 'block_content:6f6c7838-beb0-4640-b6aa-0fe90774a708'
-  label: 'Horaires et adresse'
-  label_display: '0'
+  label: 'La Mauritanie'
+  label_display: '1'
   provider: block_content
   view_mode: full
 visibility: {  }
