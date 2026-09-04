@@ -9,3 +9,10 @@ label: Global
 tags:
   canonical_url: '[current-page:url]'
   title: '[current-page:title] | [site:name]'
+  description: "Site officiel de l'Ambassade de la République Islamique de Mauritanie en France : démarches consulaires, actualités et informations pratiques."
+  schema_organization_type: GovernmentOrganization
+  schema_organization_name: '[site:name]'
+  schema_organization_url: '[site:url]'
+  schema_web_site_type: WebSite
+  schema_web_site_name: '[site:name]'
+  schema_web_site_url: '[site:url]'

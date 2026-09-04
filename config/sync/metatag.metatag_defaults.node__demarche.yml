@@ -1,0 +1,12 @@
+uuid: a1fc9e08-0165-4f87-9ec6-4064e3d81cc5
+langcode: fr
+status: true
+dependencies: {  }
+id: node__demarche
+label: 'Contenu: Démarche consulaire'
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:field_public_concerne]'
+  og_title: '[node:title]'
+  og_description: '[node:field_public_concerne]'
+  og_type: website

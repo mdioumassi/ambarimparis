@@ -22,6 +22,15 @@ content:
     third_party_settings: {  }
     weight: -20
     region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: card_webp
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -31,7 +40,6 @@ hidden:
   body: true
   field_chapo: true
   field_date_publication: true
-  field_image: true
   field_type_actualite: true
   langcode: true
   search_api_excerpt: true

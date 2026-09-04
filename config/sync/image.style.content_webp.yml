@@ -1,0 +1,22 @@
+uuid: 34b1d0a4-cc95-4eec-8375-16539fd2da41
+langcode: fr
+status: true
+dependencies: {  }
+name: content_webp
+label: 'Contenu (WebP, largeur 1200)'
+effects:
+  17be530b-f1a9-4f44-9762-2d14ca33963a:
+    uuid: 17be530b-f1a9-4f44-9762-2d14ca33963a
+    id: image_scale
+    weight: 0
+    data:
+      width: 1200
+      height: null
+      upscale: false
+  a5e1c64b-de22-42cb-b6d5-2cca3a654963:
+    uuid: a5e1c64b-de22-42cb-b6d5-2cca3a654963
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+      quality: 82

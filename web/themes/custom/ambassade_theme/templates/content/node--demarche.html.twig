@@ -60,6 +60,26 @@
       <h2>{{ 'Questions fréquentes'|t }}</h2>
       {{ content.field_faq }}
     </section>
+    {% set faq_entities = [] %}
+    {% for item in node.field_faq %}
+      {% set faq_entities = faq_entities|merge([{
+        '@type': 'Question',
+        'name': item.entity.field_question.value,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': item.entity.field_reponse.value|striptags|trim,
+        },
+      }]) %}
+    {% endfor %}
+    {% if faq_entities is not empty %}
+      <script type="application/ld+json">
+        {{ {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          'mainEntity': faq_entities,
+        }|json_encode|raw }}
+      </script>
+    {% endif %}
   {% endif %}
 
 </article>

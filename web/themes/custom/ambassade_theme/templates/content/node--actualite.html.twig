@@ -27,4 +27,19 @@
 
   {{ content.body }}
 
+  <script type="application/ld+json">
+    {{ {
+      '@context': 'https://schema.org',
+      '@type': 'NewsArticle',
+      'headline': node.label(),
+      'datePublished': node.field_date_publication.value,
+      'dateModified': node.getChangedTime()|date('c'),
+      'mainEntityOfPage': canonical_url,
+      'publisher': {
+        '@type': 'GovernmentOrganization',
+        'name': site_name,
+      },
+    }|json_encode|raw }}
+  </script>
+
 </article>

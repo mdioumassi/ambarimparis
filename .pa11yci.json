@@ -13,6 +13,8 @@
     "http://127.0.0.1:8888/actualites",
     "http://127.0.0.1:8888/recherche",
     "http://127.0.0.1:8888/mentions-legales",
+    "http://127.0.0.1:8888/lighthouse-demo-demarche",
+    "http://127.0.0.1:8888/lighthouse-demo-actualite",
     "http://127.0.0.1:8888/ar"
   ]
 }

@@ -58,11 +58,12 @@ seckit_csp:
   checkbox: true
   report_only: false
   default-src: "'self'"
-  script-src: "'self'"
+  script-src: "'self' https://matomo.example.org"
   style-src: "'self' 'unsafe-inline'"
-  img-src: "'self' data:"
+  img-src: "'self' data: https://matomo.example.org"
   font-src: "'self' data:"
   object-src: "'none'"
   base-uri: "'self'"
   form-action: "'self'"
   frame-ancestors: "'self'"
+  connect-src: "'self' https://matomo.example.org"
