@@ -1,17 +1,16 @@
-uuid: 2c117978-a67b-42c2-8ed4-3748760fb79a
+uuid: c9a5521b-1074-447c-b140-fd202caa24b0
 langcode: fr
 status: true
 dependencies:
   module:
     - block_content
-    - webform
-id: block_content.field_webform
-field_name: field_webform
+    - text
+id: block_content.field_horaires
+field_name: field_horaires
 entity_type: block_content
-type: webform
-settings:
-  target_type: webform
-module: webform
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

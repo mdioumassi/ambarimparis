@@ -1,0 +1,22 @@
+uuid: a686c37a-2fcf-4cb4-93b7-d8b35a3de191
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_accueil
+    - field.storage.block_content.field_adresse
+  module:
+    - text
+id: block_content.contact_accueil.field_adresse
+field_name: field_adresse
+entity_type: block_content
+bundle: contact_accueil
+label: Adresse
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

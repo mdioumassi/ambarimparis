@@ -1,0 +1,22 @@
+uuid: 5d293a2f-7c42-487a-8daa-5eec7eb424a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_accueil
+    - field.storage.block_content.field_contact_infos
+  module:
+    - text
+id: block_content.contact_accueil.field_contact_infos
+field_name: field_contact_infos
+entity_type: block_content
+bundle: contact_accueil
+label: Contact
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

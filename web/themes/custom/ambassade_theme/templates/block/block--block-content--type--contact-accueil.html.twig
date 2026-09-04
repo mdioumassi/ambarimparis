@@ -1,0 +1,24 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Bloc "infos pratiques" (accueil) : horaires, adresse, contact, en trois
+ * colonnes.
+ */
+#}
+{% block content %}
+  <div class="infos-pratiques">
+    <div class="infos-pratiques__column">
+      <h3 class="infos-pratiques__title">{{ "Horaires d'ouverture"|t }}</h3>
+      {{ content.field_horaires }}
+    </div>
+    <div class="infos-pratiques__column">
+      <h3 class="infos-pratiques__title">{{ 'Adresse'|t }}</h3>
+      {{ content.field_adresse }}
+    </div>
+    <div class="infos-pratiques__column">
+      <h3 class="infos-pratiques__title">{{ 'Contact'|t }}</h3>
+      {{ content.field_contact_infos }}
+    </div>
+  </div>
+{% endblock %}

@@ -4,25 +4,37 @@ status: true
 dependencies:
   config:
     - block_content.type.contact_accueil
-    - field.field.block_content.contact_accueil.field_carte_placeholder
+    - field.field.block_content.contact_accueil.field_adresse
+    - field.field.block_content.contact_accueil.field_contact_infos
+    - field.field.block_content.contact_accueil.field_horaires
     - field.field.block_content.contact_accueil.field_texte
-    - field.field.block_content.contact_accueil.field_webform
   module:
     - text
-    - webform
 id: block_content.contact_accueil.default
 targetEntityType: block_content
 bundle: contact_accueil
 mode: default
 content:
-  field_carte_placeholder:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-      link_rel: canonical
+  field_adresse:
+    type: text_default
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 17
+    region: content
+  field_contact_infos:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_horaires:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
     region: content
   field_texte:
     type: text_default
@@ -30,15 +42,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
-    region: content
-  field_webform:
-    type: webform_entity_reference_entity_view
-    label: hidden
-    settings:
-      source_entity: true
-      lazy: false
-    third_party_settings: {  }
-    weight: 2
     region: content
 hidden:
   langcode: true
