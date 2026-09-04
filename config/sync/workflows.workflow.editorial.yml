@@ -1,0 +1,52 @@
+uuid: d5d50b14-56db-4e68-ae92-1e329cde00d7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: editorial
+label: Éditorial
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Brouillon
+      weight: 0
+      published: false
+      default_revision: false
+    published:
+      label: Publié
+      weight: 2
+      published: true
+      default_revision: true
+    review:
+      label: Relecture
+      weight: 1
+      published: false
+      default_revision: false
+  transitions:
+    create_new_draft:
+      label: 'Créer un nouveau brouillon'
+      from:
+        - draft
+        - review
+        - published
+      to: draft
+      weight: 0
+    publish:
+      label: Publier
+      from:
+        - draft
+        - review
+        - published
+      to: published
+      weight: 2
+    submit_for_review:
+      label: 'Soumettre pour relecture'
+      from:
+        - draft
+        - review
+      to: review
+      weight: 1
+  entity_types: {  }
+  default_moderation_state: draft

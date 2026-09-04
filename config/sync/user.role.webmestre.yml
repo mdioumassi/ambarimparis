@@ -1,0 +1,51 @@
+uuid: 9fa0c099-79ca-4e2f-87d7-ce1b51af2a43
+langcode: fr
+status: true
+dependencies:
+  config:
+    - workflows.workflow.editorial
+  module:
+    - block
+    - content_moderation
+    - content_translation
+    - language
+    - locale
+    - media
+    - node
+    - path
+    - redirect
+    - search_api
+    - system
+    - taxonomy
+    - views_ui
+    - webform
+    - workflows
+id: webmestre
+label: Webmestre
+weight: 4
+is_admin: false
+permissions:
+  - 'access site reports'
+  - 'administer blocks'
+  - 'administer content translation'
+  - 'administer content types'
+  - 'administer languages'
+  - 'administer media'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer permissions'
+  - 'administer redirects'
+  - 'administer search_api'
+  - 'administer site configuration'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer views'
+  - 'administer webform'
+  - 'administer workflows'
+  - 'translate any entity'
+  - 'translate interface'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition submit_for_review'

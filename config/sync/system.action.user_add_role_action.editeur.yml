@@ -1,0 +1,14 @@
+uuid: 091ea34c-1686-493b-b9a6-5f1d61113a0f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.editeur
+  module:
+    - user
+id: user_add_role_action.editeur
+label: 'Ajouter le rôle Éditeur aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editeur

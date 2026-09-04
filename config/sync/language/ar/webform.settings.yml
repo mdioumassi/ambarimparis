@@ -1,0 +1,21 @@
+settings:
+  default_submit_button_label: إرسال
+  default_reset_button_label: 'إعادة تعيين'
+  default_delete_button_label: حذف
+  default_wizard_start_label: البداية
+  default_wizard_confirmation_label: تام
+  default_preview_next_button_label: معاينة
+  default_preview_label: معاينة
+  default_confirmation_back_label: 'العودة للنموذج'
+  dialog_options:
+    narrow:
+      title: ضيق
+    normal:
+      title: طبيعي
+    wide:
+      title: واسع
+element:
+  default_more_title: المزيد
+  default_section_title_tag: h2
+mail:
+  default_from_name: '[site:name]'

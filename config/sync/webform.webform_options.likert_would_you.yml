@@ -1,0 +1,14 @@
+uuid: d4c19cd0-72fb-498e-b518-1bdd9d6ae22c
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: qBS2TmfAJB37Qn3TnrNM8x4AWimmDapcizzRllgo0fo
+id: likert_would_you
+label: 'Likert : Le feriez-vous'
+category: Likert
+likert: true
+options: "1: Absolument pas\r\n2: Probablement pas\r\n3: Pas sûr\r\n4: Probablement\r\n5: Absolument\n"

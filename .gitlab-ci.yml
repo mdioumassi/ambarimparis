@@ -1,0 +1,114 @@
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+
+variables:
+  COMPOSER_CACHE_DIR: "$CI_PROJECT_DIR/.composer-cache"
+
+.php_base:
+  image: php:8.3-cli
+  before_script:
+    - apt-get update -yqq && apt-get install -yqq git unzip libzip-dev libpng-dev libjpeg-dev libfreetype6-dev
+    - docker-php-ext-configure gd --with-freetype --with-jpeg
+    - docker-php-ext-install -j"$(nproc)" gd zip pdo_mysql
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - composer install --no-interaction --no-progress --prefer-dist
+  cache:
+    key: composer-${CI_COMMIT_REF_SLUG}
+    paths:
+      - .composer-cache
+      - vendor
+
+lint:phpcs:
+  extends: .php_base
+  stage: lint
+  script:
+    - vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme web/modules/custom web/themes/custom
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  # allow_failure levé tant qu'aucun module/thème custom n'existe
+  # (phpcs échoue sur "No files were checked"). À retirer au Lot 2/3.
+  allow_failure: true
+
+lint:phpstan:
+  extends: .php_base
+  stage: lint
+  script:
+    - vendor/bin/phpstan analyse --no-progress
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  # allow_failure levé tant qu'aucun module/thème custom n'existe
+  # (PHPStan échoue sur "No files found to analyse"). À retirer au Lot 2/3.
+  allow_failure: true
+
+lint:twig:
+  image: php:8.3-cli
+  stage: lint
+  before_script:
+    - apt-get update -yqq && apt-get install -yqq git unzip
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - composer global require -q friendsoftwig/twigcs
+  script:
+    - /root/.composer/vendor/bin/twigcs web/themes/custom
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  allow_failure: true
+
+lint:css:
+  image: node:20-alpine
+  stage: lint
+  script:
+    - npx --yes stylelint "web/themes/custom/**/*.css" --config .stylelintrc.json || true
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  allow_failure: true
+
+test:phpunit:
+  extends: .php_base
+  stage: test
+  services:
+    - mariadb:10.11
+  variables:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: drupal_test
+    SIMPLETEST_DB: "mysql://root:root@mariadb/drupal_test"
+    SIMPLETEST_BASE_URL: "http://localhost"
+    BROWSERTEST_OUTPUT_DIRECTORY: "/tmp"
+  script:
+    - vendor/bin/phpunit --configuration web/core/phpunit.xml.dist web/modules/custom
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  allow_failure: true
+
+build:artifact:
+  extends: .php_base
+  stage: build
+  script:
+    - composer install --no-dev --no-interaction --no-progress --optimize-autoloader
+  artifacts:
+    paths:
+      - vendor/
+      - web/
+      - config/
+    expire_in: 1 week
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+deploy:production:
+  stage: deploy
+  image: alpine:3.20
+  script:
+    - echo "Déploiement — voir docs/decisions/ pour la procédure retenue (Lot 6)."
+    # - drush deploy (exécuté sur l'environnement cible via SSH/pipeline dédié)
+  environment:
+    name: production
+  when: manual
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'

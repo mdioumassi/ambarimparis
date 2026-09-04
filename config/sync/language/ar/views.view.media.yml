@@ -1,0 +1,62 @@
+label: وسائط
+display:
+  default:
+    display_title: الافتراضي
+    display_options:
+      title: وسائط
+      fields:
+        media_bulk_form:
+          action_title: إجراء
+        thumbnail__target_id:
+          label: 'النسخة المصغرة'
+          separator: ', '
+        name:
+          separator: ', '
+        bundle:
+          label: النوع
+          separator: ', '
+        uid:
+          label: المؤلف
+          separator: ', '
+        status:
+          label: الحالة
+          settings:
+            format_custom_true: منشور
+          separator: ', '
+        changed:
+          label: 'تم التحديث'
+          separator: ', '
+        operations:
+          label: العمليات
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'العناصر لكل صفحة'
+            items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
+      exposed_form:
+        options:
+          submit_button: تصفية
+          reset_button_label: 'إعادة تعيين'
+          exposed_sorts_label: 'فرز حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      filters:
+        bundle:
+          expose:
+            label: النوع
+        status:
+          expose:
+            label: صحيح
+          group_info:
+            group_items:
+              1:
+                title: منشور
+        langcode:
+          expose:
+            label: اللغة
+  media_page_list:
+    display_title: وسائط
+    display_options:
+      menu:
+        title: وسائط

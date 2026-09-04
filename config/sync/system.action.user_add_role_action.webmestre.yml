@@ -1,0 +1,14 @@
+uuid: 2095727f-4963-4c3f-8866-ffda2101bae5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.webmestre
+  module:
+    - user
+id: user_add_role_action.webmestre
+label: 'Ajouter le rôle Webmestre aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: webmestre

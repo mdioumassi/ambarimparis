@@ -1,0 +1,35 @@
+display:
+  default:
+    display_title: الرئيسي
+    display_options:
+      exposed_form:
+        options:
+          submit_button: تصفية
+          reset_button_label: 'إعادة تعيين'
+          exposed_sorts_label: 'فرز حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'العناصر لكل صفحة'
+            items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
+      fields:
+        redirect_source__path:
+          label: من
+          separator: ', '
+        enabled:
+          label: مفعل
+          separator: ', '
+        created:
+          label: 'تم الإنشاء'
+      filters:
+        redirect_source__path:
+          expose:
+            label: من
+        redirect_redirect__uri:
+          expose:
+            label: إلى
+  page_1:
+    display_title: الصفحة

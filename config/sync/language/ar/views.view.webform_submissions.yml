@@ -1,0 +1,147 @@
+display:
+  default:
+    display_title: الرئيسي
+    display_options:
+      exposed_form:
+        options:
+          submit_button: تطبيق
+          reset_button_label: 'إعادة تعيين'
+          exposed_sorts_label: 'فرز حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'العناصر لكل صفحة'
+            items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
+      fields:
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: مسودة
+          separator: ', '
+        created:
+          label: 'تم الإنشاء'
+          separator: ', '
+        remote_addr:
+          label: 'عنوان الـIP'
+          separator: ', '
+        view_webform_submission:
+          label: العمليات
+          text: عرض
+      arguments:
+        in_draft:
+          exception:
+            title: الكل
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: إجراء
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: مسودة
+          separator: ', '
+        sticky:
+          label: مثبت
+          separator: ', '
+        locked:
+          label: مقفل
+          separator: ', '
+        created:
+          label: 'تم الإنشاء'
+          separator: ', '
+        completed:
+          label: 'تم الإنهاء'
+          separator: ', '
+        remote_addr:
+          label: 'عنوان الـIP'
+          separator: ', '
+        operations:
+          label: العمليات
+      filters:
+        sticky:
+          expose:
+            label: مثبت
+        locked:
+          expose:
+            label: مقفل
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: إجراء
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: مسودة
+          separator: ', '
+        sticky:
+          label: مثبت
+          separator: ', '
+        locked:
+          label: مقفل
+          separator: ', '
+        created:
+          label: 'تم الإنشاء'
+          separator: ', '
+        completed:
+          label: 'تم الإنهاء'
+          separator: ', '
+        remote_addr:
+          label: 'عنوان الـIP'
+          separator: ', '
+        view_webform_submission:
+          label: العمليات
+          text: عرض
+        edit_webform_submission:
+          label: العمليات
+      filters:
+        sticky:
+          expose:
+            label: مثبت
+        locked:
+          expose:
+            label: مقفل
+  embed_review:
+    display_options:
+      fields:
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: مسودة
+          separator: ', '
+        sticky:
+          label: مثبت
+          separator: ', '
+        locked:
+          label: مقفل
+          separator: ', '
+        created:
+          label: 'تم الإنشاء'
+          separator: ', '
+        completed:
+          label: 'تم الإنهاء'
+          separator: ', '
+        remote_addr:
+          label: 'عنوان الـIP'
+          separator: ', '
+        view_webform_submission:
+          label: العمليات
+          text: عرض
+      filters:
+        sticky:
+          expose:
+            label: مثبت
+        locked:
+          expose:
+            label: مقفل

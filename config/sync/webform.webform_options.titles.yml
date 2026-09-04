@@ -1,0 +1,14 @@
+uuid: 3516a5c3-ff05-47b1-98d8-bf1b89f4eaaf
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: PEUoedWrfYEX7oZ8CcOukfBTVxar1cPSROX8534esuU
+id: titles
+label: Titres
+category: Démographique
+likert: false
+options: "Miss : Mlle\r\nMs : Mme\r\nMr : M.\r\nMrs : Mme\r\nDr : Dr\n"
