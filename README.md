@@ -46,6 +46,9 @@ ddev drush config:import -y
 
 # Vider les caches
 ddev drush cache:rebuild
+
+# (Optionnel) Charger un contenu de démonstration réaliste
+ddev drush php:script scripts/create-demo-content.php
 ```
 
 Le site est ensuite accessible via `ddev launch` (URL type
@@ -85,25 +88,40 @@ ddev exec vendor/bin/phpcs --standard=Drupal,DrupalPractice web/modules/custom w
 # Analyse statique PHPStan (niveau 6)
 ddev exec vendor/bin/phpstan analyse
 
-# Audit accessibilité (pa11y-ci) — voir Lot 4
+# Audit accessibilité (pa11y-ci) et performance (Lighthouse CI) : voir
+# les jobs test:a11y / test:lighthouse dans .gitlab-ci.yml — reproductibles
+# en local en suivant les mêmes étapes (site jetable SQLite + config
+# versionnée + scripts/ci-demo-content.php).
 ```
+
+## Déploiement
+
+Le pipeline construit un artefact (`build:artifact`) puis, sur déclenchement
+manuel (`deploy:production`), le synchronise vers le serveur cible et
+exécute [`scripts/deploy.sh`](scripts/deploy.sh) (maintenance mode,
+`drush deploy`, fin de maintenance). Variables CI/CD à configurer
+(Settings > CI/CD > Variables, protégées) : `DEPLOY_HOST`, `DEPLOY_USER`,
+`DEPLOY_PATH`, `DEPLOY_SSH_PRIVATE_KEY`.
 
 ## Documentation
 
+- [`docs/architecture.md`](docs/architecture.md) — Architecture du site.
+- [`docs/guide-contributeur.md`](docs/guide-contributeur.md) — Guide back-office.
 - [`docs/decisions/`](docs/decisions/) — Journal des décisions techniques (ADR).
-- [`docs/architecture.md`](docs/architecture.md) — Architecture du site (à venir, Lot 6).
-- [`docs/guide-contributeur.md`](docs/guide-contributeur.md) — Guide back-office (à venir, Lot 6).
+- [`docs/migration/`](docs/migration/) — Gabarit d'import des redirections WordPress.
 
 ## Structure du dépôt
 
 ```
 ├── config/sync/          # Configuration Drupal versionnée
 ├── docs/                 # Documentation projet et décisions techniques
+├── scripts/              # Scripts d'exploitation (démo, redirections, déploiement)
 ├── web/                  # Document root Drupal
 │   ├── modules/custom/   # Modules métier
 │   ├── themes/custom/    # Thème ambassade_theme
 ├── .ddev/                # Configuration DDEV
 ├── .gitlab-ci.yml        # Pipeline CI/CD
+├── .pa11yci.json / .lighthouserc.json  # Audits automatisés
 ├── phpstan.neon          # Configuration PHPStan
 └── composer.json
 ```

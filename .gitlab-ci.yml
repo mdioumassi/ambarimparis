@@ -155,14 +155,32 @@ build:artifact:
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
 
-deploy:production:
+.deploy_base:
   stage: deploy
   image: alpine:3.20
+  needs:
+    - build:artifact
+  before_script:
+    - apk add --no-cache openssh-client rsync
+    - eval "$(ssh-agent -s)"
+    - echo "$DEPLOY_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
   script:
-    - echo "Déploiement — voir docs/decisions/ pour la procédure retenue (Lot 6)."
-    # - drush deploy (exécuté sur l'environnement cible via SSH/pipeline dédié)
+    - rsync -az --delete
+        --exclude='web/sites/default/settings.local.php'
+        --exclude='web/sites/default/files'
+        ./ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+    - ssh "$DEPLOY_USER@$DEPLOY_HOST" "cd $DEPLOY_PATH && ./scripts/deploy.sh"
+
+# [À CONFIGURER] Variables CI/CD à définir par environnement (Settings >
+# CI/CD > Variables) : DEPLOY_HOST, DEPLOY_USER, DEPLOY_PATH,
+# DEPLOY_SSH_PRIVATE_KEY (variable protégée/masquée).
+deploy:production:
+  extends: .deploy_base
   environment:
     name: production
+    url: https://ambarimparis.fr
   when: manual
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'

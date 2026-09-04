@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_composants
     - node.type.page
     - paragraphs.paragraphs_type.accordeon
+    - paragraphs.paragraphs_type.formulaire
     - paragraphs.paragraphs_type.grille_de_cartes
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.mise_en_avant
@@ -31,6 +32,7 @@ settings:
       accordeon: accordeon
       mise_en_avant: mise_en_avant
       grille_de_cartes: grille_de_cartes
+      formulaire: formulaire
     negate: 0
     target_bundles_drag_drop: {  }
 field_type: entity_reference_revisions
