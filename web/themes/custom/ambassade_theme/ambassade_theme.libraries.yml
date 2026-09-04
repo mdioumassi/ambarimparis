@@ -121,6 +121,7 @@ components:
       css/components/footer.css: {  }
       css/components/form-controls.css: {  }
       css/components/search.css: {  }
+      css/components/auth.css: {  }
   dependencies:
     - ambassade_theme/tokens
     - ambassade_theme/nav

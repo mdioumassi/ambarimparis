@@ -1,0 +1,129 @@
+/**
+ * Composant : pages d'authentification (connexion, mot de passe oublié,
+ * réinitialisation, inscription). Carte centrée, sobre — voir
+ * AmbassadeThemeHooks::preprocessHtml() pour la détection des routes et
+ * `body.auth-page` pour le point d'accroche.
+ */
+
+.auth-page .container.region-content {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-9);
+  background: radial-gradient(ellipse at top, var(--color-green-50), var(--color-background) 60%);
+}
+
+.auth-page .layout-content {
+  width: 100%;
+  max-width: 26rem;
+}
+
+.auth-page .region.region-content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-7) var(--space-6);
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-page .region.region-content::before {
+  content: '';
+  display: block;
+  inline-size: 56px;
+  block-size: 56px;
+  margin-inline: auto;
+  margin-block-end: var(--space-4);
+  background: url('../../logo.svg') center / contain no-repeat;
+}
+
+/* --- Titre --------------------------------------------------------------- */
+.auth-page #block-ambassade-page-title {
+  text-align: center;
+}
+
+.auth-page .page-title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+}
+
+/* --- Onglets (connexion / mot de passe oublié) en contrôle segmenté ------ */
+.auth-page #block-ambassade-local-tasks {
+  margin-block-start: var(--space-5);
+}
+
+.auth-page ul.tabs.primary {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.auth-page ul.tabs.primary li {
+  flex: 1;
+}
+
+.auth-page ul.tabs.primary a {
+  display: block;
+  padding-block: var(--space-3);
+  min-height: var(--tap-target-min);
+  border-block-end: var(--border-width-thick) solid transparent;
+  margin-block-end: -1px;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  text-decoration: none;
+}
+
+.auth-page ul.tabs.primary a:hover {
+  color: var(--color-primary);
+}
+
+.auth-page ul.tabs.primary li.is-active a,
+.auth-page ul.tabs.primary a[aria-current] {
+  border-block-end-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* --- Formulaire ------------------------------------------------------------ */
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block-start: var(--space-6);
+}
+
+.auth-page .form-item {
+  max-width: none;
+}
+
+.auth-page .form-actions {
+  margin-block-start: var(--space-3);
+}
+
+.auth-page .form-actions input[type='submit'] {
+  display: block;
+  inline-size: 100%;
+  min-height: var(--tap-target-min);
+  padding-block: var(--space-3);
+  border: var(--border-width-thick) solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.auth-page .form-actions input[type='submit']:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.auth-page .description {
+  font-size: var(--font-size-sm);
+}

@@ -96,4 +96,28 @@ class AmbassadeThemeHooks {
     $variables['content']['search_form'] = $form;
   }
 
+  /**
+   * Implements hook_preprocess_html().
+   *
+   * Flags the authentication routes (login, password reset, registration)
+   * so html.html.twig can add a body class. These pages share the same
+   * "carte centrée" treatment (css/components/auth.css) rather than each
+   * needing its own template override.
+   *
+   * @param array<string, mixed> $variables
+   *   The template variables.
+   */
+  #[Hook('preprocess_html')]
+  public function preprocessHtml(array &$variables): void {
+    $auth_routes = [
+      'user.login',
+      'user.pass',
+      'user.register',
+      'user.reset',
+      'user.reset.login',
+      'user.reset.form',
+    ];
+    $variables['auth_page'] = in_array(\Drupal::routeMatch()->getRouteName(), $auth_routes, TRUE);
+  }
+
 }
