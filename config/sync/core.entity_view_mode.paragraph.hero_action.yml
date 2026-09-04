@@ -1,0 +1,11 @@
+uuid: 3193e36a-18b8-4e68-ab43-b9d27419b44b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.hero_action
+label: 'Action hero (accueil)'
+description: null
+targetEntityType: paragraph
+cache: true

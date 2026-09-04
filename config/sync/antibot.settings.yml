@@ -6,4 +6,5 @@ form_ids:
   - user_register_form
   - 'contact_message_*'
   - 'webform_submission_webform_*'
+  - 'webform_submission_*'
 show_form_ids: false

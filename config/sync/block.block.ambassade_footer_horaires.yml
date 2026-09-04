@@ -1,0 +1,23 @@
+uuid: 5919023a-fa2f-4a57-97bd-a0a7b58097da
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6f6c7838-beb0-4640-b6aa-0fe90774a708'
+  module:
+    - block_content
+  theme:
+    - ambassade_theme
+id: ambassade_footer_horaires
+theme: ambassade_theme
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:6f6c7838-beb0-4640-b6aa-0fe90774a708'
+settings:
+  id: 'block_content:6f6c7838-beb0-4640-b6aa-0fe90774a708'
+  label: 'Horaires et adresse'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

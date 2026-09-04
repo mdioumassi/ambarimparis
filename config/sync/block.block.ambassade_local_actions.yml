@@ -1,0 +1,18 @@
+uuid: 2d5dbe41-3db8-4634-bd27-a10275215ecc
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - ambassade_theme
+id: ambassade_local_actions
+theme: ambassade_theme
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Actions locales'
+  label_display: '0'
+  provider: core
+visibility: {  }

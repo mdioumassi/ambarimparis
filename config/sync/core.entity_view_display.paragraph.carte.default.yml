@@ -8,14 +8,30 @@ dependencies:
     - field.field.paragraph.carte.field_texte_court
     - field.field.paragraph.carte.field_titre
     - paragraphs.paragraphs_type.carte
+  module:
+    - text
 id: paragraph.carte.default
 targetEntityType: paragraph
 bundle: carte
 mode: default
-content: {  }
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_texte_court:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
-  field_image: true
   field_lien: true
-  field_texte_court: true
   field_titre: true
   search_api_excerpt: true

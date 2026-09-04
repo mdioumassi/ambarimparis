@@ -1,0 +1,65 @@
+/**
+ * Composant : pied de page (BEM).
+ */
+
+.site-footer {
+  margin-block-start: var(--space-9);
+  background-color: var(--color-green-900);
+  color: var(--color-white);
+}
+
+.site-footer a {
+  color: var(--color-white);
+}
+
+.site-footer a:hover {
+  color: var(--color-gold-500);
+}
+
+.site-footer__top {
+  padding-block: var(--space-7);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-block__title {
+  margin-block: 0 var(--space-3);
+  font-size: var(--font-size-base);
+  color: var(--color-gold-500);
+}
+
+.footer-block__title,
+.footer-block p,
+.footer-block ul {
+  margin-block-end: var(--space-2);
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.site-footer__bottom {
+  padding-block: var(--space-4);
+  border-block-start: var(--border-width) solid rgba(255, 255, 255, 0.15);
+  font-size: var(--font-size-sm);
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,30 @@
+uuid: 38bc9711-a52e-46e7-9a87-152da7e5262d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_action
+    - field.field.paragraph.carte.field_image
+    - field.field.paragraph.carte.field_lien
+    - field.field.paragraph.carte.field_texte_court
+    - field.field.paragraph.carte.field_titre
+    - paragraphs.paragraphs_type.carte
+  module:
+    - text
+id: paragraph.carte.hero_action
+targetEntityType: paragraph
+bundle: carte
+mode: hero_action
+content:
+  field_texte_court:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_image: true
+  field_lien: true
+  field_titre: true
+  search_api_excerpt: true

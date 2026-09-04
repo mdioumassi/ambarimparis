@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.actualite.body
     - field.field.node.actualite.field_chapo
     - field.field.node.actualite.field_date_publication
     - field.field.node.actualite.field_image
@@ -27,6 +28,7 @@ content:
     weight: 100
     region: content
 hidden:
+  body: true
   field_chapo: true
   field_date_publication: true
   field_image: true

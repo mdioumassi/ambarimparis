@@ -1,0 +1,8 @@
+uuid: a4110321-9c42-4beb-9648-fc163063f8a5
+langcode: fr
+status: true
+dependencies: {  }
+id: contact_accueil
+label: "Bloc contact d'accueil"
+revision: true
+description: null

@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Paragraphe "image" — visuel avec légende optionnelle.
+ */
+#}
+<figure{{ attributes.addClass('media-block') }}>
+  {{ content.field_media_image_ref }}
+  {% if paragraph.field_legende.value %}
+    <figcaption>{{ paragraph.field_legende.value }}</figcaption>
+  {% endif %}
+</figure>

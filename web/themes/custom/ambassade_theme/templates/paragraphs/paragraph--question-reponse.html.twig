@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Paragraphe "question / réponse" (FAQ des démarches) — rendu comme un
+ * panneau d'accordéon accessible (<details>/<summary>).
+ */
+#}
+<details{{ attributes.addClass('accordion__item') }}>
+  <summary class="accordion__summary">
+    {{ paragraph.field_question.value }}
+    <svg class="accordion__icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+  </summary>
+  <div class="accordion__content">
+    {{ content.field_reponse }}
+  </div>
+</details>

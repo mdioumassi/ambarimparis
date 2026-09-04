@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Fiche démarche (vue complète).
+ */
+#}
+<article{{ attributes.addClass('node', 'node--type-demarche', 'container', 'container--narrow') }}>
+
+  {% if content.field_service|render %}
+    <div class="node__header">
+      <span class="card__eyebrow">{{ content.field_service }}</span>
+    </div>
+  {% endif %}
+
+  <dl class="node__meta-grid">
+    {% if content.field_delais|render %}
+      <div>
+        <dt><svg class="button__icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>{{ 'Délais'|t }}</dt>
+        <dd>{{ content.field_delais }}</dd>
+      </div>
+    {% endif %}
+    {% if content.field_tarifs|render %}
+      <div>
+        <dt>{{ 'Tarifs'|t }}</dt>
+        <dd>{{ content.field_tarifs }}</dd>
+      </div>
+    {% endif %}
+  </dl>
+
+  {% if content.field_public_concerne|render %}
+    <section>
+      <h2>{{ 'Public concerné'|t }}</h2>
+      {{ content.field_public_concerne }}
+    </section>
+  {% endif %}
+
+  {% if content.field_pieces_a_fournir|render %}
+    <section>
+      <h2>{{ 'Pièces à fournir'|t }}</h2>
+      {{ content.field_pieces_a_fournir }}
+    </section>
+  {% endif %}
+
+  {% if content.field_modalites|render %}
+    <section>
+      <h2>{{ 'Modalités de dépôt et de retrait'|t }}</h2>
+      {{ content.field_modalites }}
+    </section>
+  {% endif %}
+
+  {% if content.field_formulaires|render %}
+    <section>
+      <h2>{{ 'Formulaires'|t }}</h2>
+      {{ content.field_formulaires }}
+    </section>
+  {% endif %}
+
+  {% if content.field_faq|render %}
+    <section>
+      <h2>{{ 'Questions fréquentes'|t }}</h2>
+      {{ content.field_faq }}
+    </section>
+  {% endif %}
+
+</article>

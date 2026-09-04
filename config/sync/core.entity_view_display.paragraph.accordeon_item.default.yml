@@ -6,12 +6,20 @@ dependencies:
     - field.field.paragraph.accordeon_item.field_contenu
     - field.field.paragraph.accordeon_item.field_titre
     - paragraphs.paragraphs_type.accordeon_item
+  module:
+    - text
 id: paragraph.accordeon_item.default
 targetEntityType: paragraph
 bundle: accordeon_item
 mode: default
-content: {  }
+content:
+  field_contenu:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
-  field_contenu: true
   field_titre: true
   search_api_excerpt: true

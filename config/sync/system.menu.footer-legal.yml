@@ -1,0 +1,8 @@
+uuid: c145caa8-2f5e-48e7-a00e-40ebd58edd81
+langcode: fr
+status: true
+dependencies: {  }
+id: footer-legal
+label: 'Pied de page — mentions'
+description: null
+locked: false

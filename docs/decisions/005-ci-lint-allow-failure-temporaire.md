@@ -1,5 +1,10 @@
 # 005 — `allow_failure` temporaire sur les jobs de lint PHP
 
+> **Résolu au Lot 3** : `web/themes/custom/ambassade_theme` contient désormais
+> du code PHP (`src/Hook/AmbassadeThemeHooks.php`). `lint:phpcs` et
+> `lint:phpstan` sont repassés bloquants (`allow_failure` retiré) dans
+> `.gitlab-ci.yml`. Le contenu ci-dessous est conservé à titre historique.
+
 ## Contexte
 
 `web/modules/custom` et `web/themes/custom` sont vides à l'issue du Lot 1

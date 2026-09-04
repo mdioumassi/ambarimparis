@@ -1,0 +1,51 @@
+/**
+ * Composant : fil d'Ariane (BEM léger sur la structure native `.breadcrumb`).
+ * Séparateur purement décoratif (::before, ignoré par les lecteurs d'écran).
+ */
+
+.breadcrumb {
+  padding-block: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: '\203A'; /* › */
+  color: var(--color-gray-300);
+}
+
+[dir='rtl'] .breadcrumb li:not(:first-child)::before {
+  content: '\2039'; /* ‹, sens de lecture inversé */
+}
+
+.breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-link-hover);
+}
+
+.breadcrumb li:last-child {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}

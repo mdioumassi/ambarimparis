@@ -1,0 +1,23 @@
+uuid: 2f58495b-7a5d-4843-9401-34d7515ae907
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4ca579af-aca3-42cf-8ccc-674dfad3d681'
+  module:
+    - block_content
+  theme:
+    - ambassade_theme
+id: ambassade_footer_liens
+theme: ambassade_theme
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:4ca579af-aca3-42cf-8ccc-674dfad3d681'
+settings:
+  id: 'block_content:4ca579af-aca3-42cf-8ccc-674dfad3d681'
+  label: 'Liens officiels'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

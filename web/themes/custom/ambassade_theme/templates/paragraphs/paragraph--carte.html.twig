@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Paragraphe "carte" — utilisé seul (grille de cartes) ou en variante
+ * "hero_action" pour les 3 actions de la page d'accueil.
+ *
+ * field_lien fournit le lien qui rend toute la carte cliquable
+ * (cf. .card__title a::after en CSS) ; field_titre porte le titre visible.
+ */
+#}
+{% set is_hero = view_mode == 'hero_action' %}
+{% set link_item = paragraph.field_lien.0 %}
+<div{{ attributes.addClass(is_hero ? 'hero__action' : 'card') }}>
+  {% if content.field_image|render and not is_hero %}
+    <div class="card__media">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+  <div class="{{ is_hero ? '' : 'card__body' }}">
+    {% if is_hero %}
+      <svg class="hero__action-icon" aria-hidden="true"><use href="#icon-passport"></use></svg>
+    {% endif %}
+    <h3 class="{{ is_hero ? 'hero__action-title' : 'card__title' }}">
+      {% if link_item %}
+        <a href="{{ link_item.getUrl().toString() }}">{{ paragraph.field_titre.value }}</a>
+      {% else %}
+        {{ paragraph.field_titre.value }}
+      {% endif %}
+    </h3>
+    {% if content.field_texte_court|render %}
+      <div class="{{ is_hero ? 'hero__action-description' : 'card__excerpt' }}">
+        {{ content.field_texte_court }}
+      </div>
+    {% endif %}
+  </div>
+</div>

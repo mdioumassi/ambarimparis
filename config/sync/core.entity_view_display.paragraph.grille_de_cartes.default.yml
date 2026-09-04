@@ -5,11 +5,21 @@ dependencies:
   config:
     - field.field.paragraph.grille_de_cartes.field_cartes
     - paragraphs.paragraphs_type.grille_de_cartes
+  module:
+    - entity_reference_revisions
 id: paragraph.grille_de_cartes.default
 targetEntityType: paragraph
 bundle: grille_de_cartes
 mode: default
-content: {  }
+content:
+  field_cartes:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
-  field_cartes: true
   search_api_excerpt: true

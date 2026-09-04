@@ -1,0 +1,54 @@
+/**
+ * Mise en page générale des régions.
+ */
+
+.layout-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-page__main {
+  flex: 1;
+}
+
+.region-content {
+  padding-block: var(--space-6);
+}
+
+.layout-with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .layout-with-sidebar {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.region-quick-access,
+.region-contact-block {
+  padding-block: var(--space-7);
+}
+
+.region-quick-access {
+  background-color: var(--color-surface);
+}
+
+.section-title {
+  margin-block-end: var(--space-5);
+}
+
+/* Le hero porte déjà le message d'accueil : le H1 "Accueil" reste dans le
+   DOM pour la structure de titres/SEO mais n'est pas dupliqué visuellement. */
+.path-frontpage #block-ambassade-page-title {
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  margin: -1px;
+}

@@ -1,0 +1,18 @@
+uuid: 33d4e0c3-265b-4891-b162-ee09003d7ab2
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - ambassade_theme
+id: ambassade_help
+theme: ambassade_theme
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  label_display: '0'
+  provider: core
+visibility: {  }

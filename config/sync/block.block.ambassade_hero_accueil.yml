@@ -1,0 +1,29 @@
+uuid: 1235d04f-3127-4019-aa30-810350061eba
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_accueil:e591fc76-968f-4764-ab95-f9d6456814ac'
+  module:
+    - block_content
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_hero_accueil
+theme: ambassade_theme
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:e591fc76-968f-4764-ab95-f9d6456814ac'
+settings:
+  id: 'block_content:e591fc76-968f-4764-ab95-f9d6456814ac'
+  label: 'Hero accueil'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,20 @@
+uuid: 2ee04e67-6b33-4ed0-9987-c05f706b8799
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_breadcrumb
+theme: ambassade_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: "Fil d'Ariane"
+  label_display: '0'
+  provider: core
+visibility: {  }

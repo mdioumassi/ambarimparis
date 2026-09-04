@@ -1,0 +1,23 @@
+uuid: 8b079b21-41b0-446f-b7af-1bba2daae743
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_branding
+theme: ambassade_theme
+region: header
+weight: -10
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Ambassade — identité'
+  label_display: '0'
+  provider: core
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

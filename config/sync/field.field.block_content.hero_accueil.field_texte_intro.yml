@@ -1,0 +1,22 @@
+uuid: 57c882bf-d2f8-4aff-97ca-b1b2b0e61efa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_accueil
+    - field.storage.block_content.field_texte_intro
+  module:
+    - text
+id: block_content.hero_accueil.field_texte_intro
+field_name: field_texte_intro
+entity_type: block_content
+bundle: hero_accueil
+label: "Texte d'introduction"
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

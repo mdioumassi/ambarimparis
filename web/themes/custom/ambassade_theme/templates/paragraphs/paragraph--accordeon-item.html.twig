@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Un panneau d'accordéon : <details>/<summary> natifs, accessibles au
+ * clavier et aux lecteurs d'écran sans JavaScript.
+ */
+#}
+<details{{ attributes.addClass('accordion__item') }}>
+  <summary class="accordion__summary">
+    {{ paragraph.field_titre.value }}
+    <svg class="accordion__icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+  </summary>
+  <div class="accordion__content">
+    {{ content.field_contenu }}
+  </div>
+</details>

@@ -1,0 +1,29 @@
+uuid: 3e5b4cad-e5fe-45dd-a6c4-c843849be80e
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:acces_rapides:c5b1befa-7db4-4d3d-9508-fab3139325eb'
+  module:
+    - block_content
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_acces_rapides
+theme: ambassade_theme
+region: quick_access
+weight: 0
+provider: null
+plugin: 'block_content:c5b1befa-7db4-4d3d-9508-fab3139325eb'
+settings:
+  id: 'block_content:c5b1befa-7db4-4d3d-9508-fab3139325eb'
+  label: 'Accès rapides'
+  label_display: '1'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

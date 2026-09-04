@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Paragraphe "mise en avant" — bandeau promotionnel avec image, texte et
+ * appel à l'action.
+ */
+#}
+{% set link_item = paragraph.field_lien.0 %}
+<div{{ attributes.addClass('highlight') }}>
+  {% if content.field_image|render %}
+    <div class="highlight__media">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+  <div class="highlight__body">
+    <h2 class="highlight__title">{{ paragraph.field_titre.value }}</h2>
+    {% if content.field_texte_court|render %}
+      <div class="highlight__text">{{ content.field_texte_court }}</div>
+    {% endif %}
+    {% if link_item %}
+      <a class="button button--primary" href="{{ link_item.getUrl().toString() }}">
+        {{ link_item.title }}
+      </a>
+    {% endif %}
+  </div>
+</div>

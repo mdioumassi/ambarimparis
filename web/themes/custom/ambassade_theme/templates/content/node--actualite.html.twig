@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Fiche actualité (vue complète).
+ */
+#}
+<article{{ attributes.addClass('node', 'node--type-actualite', 'container', 'container--narrow') }}>
+
+  <div class="node__header">
+    {% if content.field_type_actualite|render %}
+      <span class="card__eyebrow">{{ content.field_type_actualite }}</span>
+    {% endif %}
+    {% if content.field_date_publication|render %}
+      <p class="node__meta">{{ content.field_date_publication }}</p>
+    {% endif %}
+  </div>
+
+  {% if content.field_image|render %}
+    <div class="node__media">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+
+  {% if content.field_chapo|render %}
+    <div class="node__chapo">{{ content.field_chapo }}</div>
+  {% endif %}
+
+  {{ content.body }}
+
+</article>

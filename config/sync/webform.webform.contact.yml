@@ -15,33 +15,28 @@ template: false
 archive: false
 id: contact
 title: Contact
-description: 'Basic email contact webform.'
+description: 'Formulaire de contact du site.'
 categories: {  }
-elements: |
-  name:
-    '#title': 'Your Name'
+elements: |-
+  nom:
+    '#title': 'Nom complet'
     '#type': textfield
     '#required': true
-    '#default_value': '[current-user:display-name]'
   email:
-    '#title': 'Your Email'
+    '#title': 'Adresse e-mail'
     '#type': email
     '#required': true
-    '#default_value': '[current-user:mail]'
-  subject:
-    '#title': Subject
+  sujet:
+    '#title': Sujet
     '#type': textfield
     '#required': true
-    '#test': 'Testing contact webform from [site:name]'
   message:
     '#title': Message
     '#type': textarea
     '#required': true
-    '#test': 'Please ignore this email.'
   actions:
     '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#submit__label': Envoyer
 css: ''
 javascript: ''
 settings:
@@ -83,6 +78,7 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_file_limit_message: ''
   form_attributes: {  }
   form_method: ''
   form_action: ''
@@ -146,10 +142,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: message
   confirmation_url: '<front>'
   confirmation_title: ''
-  confirmation_message: 'Votre message a été envoyé.'
+  confirmation_message: 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''

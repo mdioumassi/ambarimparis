@@ -1,0 +1,20 @@
+uuid: 0af9140f-5aea-4c9b-b0c3-00ae6da853e6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_messages
+theme: ambassade_theme
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Messages système'
+  label_display: '0'
+  provider: core
+visibility: {  }

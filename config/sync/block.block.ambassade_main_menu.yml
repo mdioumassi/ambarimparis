@@ -1,0 +1,25 @@
+uuid: 0ff9aa77-0ab3-475c-9cbb-a091121f8ba9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ambassade_theme
+id: ambassade_main_menu
+theme: ambassade_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Menu principal'
+  label_display: '0'
+  provider: core
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

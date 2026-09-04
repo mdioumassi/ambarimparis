@@ -1,0 +1,47 @@
+/**
+ * Formulaire de recherche et liste de suggestions d'autocomplétion
+ * (widget jQuery UI utilisé par core/drupal.autocomplete +
+ * search_api_autocomplete).
+ */
+
+.views-exposed-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-3);
+  margin-block-end: var(--space-6);
+}
+
+.views-exposed-form .form-actions {
+  margin: 0;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  z-index: 100;
+  max-width: 32rem;
+  margin: 0;
+  padding: var(--space-1) 0;
+  list-style: none;
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.ui-autocomplete li {
+  margin: 0;
+}
+
+.ui-autocomplete .ui-menu-item-wrapper {
+  display: block;
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  cursor: pointer;
+}
+
+.ui-autocomplete .ui-state-active,
+.ui-autocomplete .ui-menu-item-wrapper:hover {
+  background-color: var(--color-green-50);
+  color: var(--color-primary);
+}

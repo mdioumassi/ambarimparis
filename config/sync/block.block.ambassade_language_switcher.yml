@@ -1,0 +1,20 @@
+uuid: eff784be-12b1-43cf-830e-ed7d7fa77d17
+langcode: fr
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - ambassade_theme
+id: ambassade_language_switcher
+theme: ambassade_theme
+region: header
+weight: -5
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: Langue
+  label_display: '0'
+  provider: core
+visibility: {  }

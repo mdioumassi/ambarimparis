@@ -6,12 +6,20 @@ dependencies:
     - field.field.paragraph.question_reponse.field_question
     - field.field.paragraph.question_reponse.field_reponse
     - paragraphs.paragraphs_type.question_reponse
+  module:
+    - text
 id: paragraph.question_reponse.default
 targetEntityType: paragraph
 bundle: question_reponse
 mode: default
-content: {  }
+content:
+  field_reponse:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   field_question: true
-  field_reponse: true
   search_api_excerpt: true

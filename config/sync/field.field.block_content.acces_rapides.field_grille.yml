@@ -1,0 +1,28 @@
+uuid: 33a098f5-a91b-42b1-ae4b-ef37fa6ffb09
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.acces_rapides
+    - field.storage.block_content.field_grille
+    - paragraphs.paragraphs_type.grille_de_cartes
+  module:
+    - entity_reference_revisions
+id: block_content.acces_rapides.field_grille
+field_name: field_grille
+entity_type: block_content
+bundle: acces_rapides
+label: 'Grille de cartes'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      grille_de_cartes: grille_de_cartes
+    negate: 0
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions
