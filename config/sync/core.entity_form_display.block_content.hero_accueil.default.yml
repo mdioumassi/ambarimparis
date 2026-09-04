@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.hero_accueil
     - field.field.block_content.hero_accueil.field_actions
     - field.field.block_content.hero_accueil.field_texte_intro
+    - field.field.block_content.hero_accueil.field_titre
   module:
     - paragraphs
     - text
@@ -38,6 +39,14 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_titre:
+    type: string_textfield
+    weight: 30
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   info:

@@ -1,0 +1,31 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Hero de la page d'accueil : titre (H1), texte d'intro, recherche, actions.
+ *
+ * Suggestion de thème pour le bloc "block" quand il rend un block_content de
+ * type hero_accueil (block_content.module ne fournit pas de hook "block_content"
+ * dédié : voir AmbassadeThemeHooks::preprocessBlock()).
+ *
+ * `content.search_form` est injecté par ce même preprocess (formulaire
+ * exposé de la vue "recherche"), seul moyen de l'intercaler entre le texte
+ * d'intro et les cartes d'action puisque les trois proviennent du même bloc.
+ */
+#}
+{% block content %}
+  <div class="hero__inner">
+    {% if block_content.field_titre.value %}
+      <h1 class="hero__title">{{ block_content.field_titre.value }}</h1>
+    {% endif %}
+    {% if content.field_texte_intro|render %}
+      <div class="hero__lead">{{ content.field_texte_intro }}</div>
+    {% endif %}
+    {% if content.search_form %}
+      <div class="hero__search">
+        {{ content.search_form }}
+      </div>
+    {% endif %}
+    {{ content.field_actions }}
+  </div>
+{% endblock %}

@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.hero_accueil
     - field.field.block_content.hero_accueil.field_actions
     - field.field.block_content.hero_accueil.field_texte_intro
+    - field.field.block_content.hero_accueil.field_titre
   module:
     - entity_reference_revisions
     - text
@@ -29,6 +30,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_titre:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden:
   langcode: true

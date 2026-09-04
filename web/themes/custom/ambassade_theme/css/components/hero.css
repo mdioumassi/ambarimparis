@@ -4,35 +4,133 @@
  */
 
 .hero {
-  background: linear-gradient(180deg, var(--color-green-50), var(--color-background));
+  background: linear-gradient(90deg, var(--color-green-700), #004a26);
   padding-block: var(--space-8);
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  max-width: var(--content-max-width-wide);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  text-align: center;
 }
 
 .hero__title {
   max-width: var(--content-narrow-width);
-  margin-block: 0 var(--space-3);
+  margin: 0;
   font-size: var(--font-size-xxl);
-  color: var(--color-green-900);
+  color: var(--color-white);
 }
 
 .hero__lead {
   max-width: var(--content-narrow-width);
-  margin-block-end: var(--space-6);
   font-size: var(--font-size-md);
-  color: var(--color-text-muted);
+  color: #d9ebde;
+}
+
+.hero__search {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.hero__search .views-exposed-form {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0;
+  margin: 0;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.hero__search .form--inline {
+  display: contents;
+}
+
+.hero__search .form-item {
+  flex: 1;
+  margin: 0;
+}
+
+/* Le label reste dans le DOM pour les lecteurs d'écran (jamais
+   `display: none`, qui le retirerait aussi de l'arbre d'accessibilité). */
+.hero__search label {
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  margin: -1px;
+}
+
+.hero__search input[type='text'],
+.hero__search input[type='search'] {
+  inline-size: 100%;
+  block-size: 100%;
+  min-height: var(--tap-target-min);
+  padding-inline-start: var(--space-5);
+  border: 0;
+  border-radius: 0;
+}
+
+.hero__search input[type='text']:focus-visible,
+.hero__search input[type='search']:focus-visible {
+  outline-offset: -2px;
+}
+
+.hero__search .form-actions {
+  margin: 0;
+}
+
+/* Aide conservée pour les lecteurs d'écran (liée par aria-describedby),
+   masquée visuellement pour ne pas casser la barre de recherche. */
+.hero__search .description {
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  margin: -1px;
+}
+
+.hero__search .form-actions .button,
+.hero__search input[type='submit'] {
+  block-size: 100%;
+  min-height: var(--tap-target-min);
+  border-radius: 0;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: var(--font-weight-bold);
+}
+
+.hero__search .form-actions .button:hover,
+.hero__search input[type='submit']:hover {
+  background-color: var(--color-gold-600);
+  border-color: var(--color-gold-600);
 }
 
 .hero__actions,
 .hero .field--name-field-actions {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-4);
+  gap: var(--space-5);
+  width: 100%;
+  max-width: 22rem;
 }
 
 @media (min-width: 768px) {
   .hero__actions,
   .hero .field--name-field-actions {
     grid-template-columns: repeat(3, 1fr);
+    max-width: none;
   }
 }
 
@@ -40,36 +138,47 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-3);
+  gap: var(--space-2);
   padding: var(--space-5);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   background-color: var(--color-background);
-  border: var(--border-width) solid var(--color-border);
+  border: 0;
   text-decoration: none;
   color: var(--color-text);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-card);
+  text-align: start;
   transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
 
+@media (min-width: 768px) {
+  .hero__action {
+    inline-size: 310px;
+  }
+}
+
 .hero__action:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
   color: var(--color-text);
 }
 
 .hero__action-icon {
-  inline-size: 2rem;
-  block-size: 2rem;
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: var(--color-green-50);
+  border: 2px solid var(--color-accent);
   fill: var(--color-primary);
 }
 
 .hero__action-title {
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-md);
+  font-size: 1.0625rem;
 }
 
 .hero__action-description {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  font-size: 0.8125rem;
 }
