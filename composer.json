@@ -26,6 +26,7 @@
         "drupal/easy_responsive_images": "^1.6",
         "drupal/entity_reference_revisions": "^1.14",
         "drupal/eu_cookie_compliance": "^1.29",
+        "drupal/gin": "^5.0",
         "drupal/honeypot": "^2.2",
         "drupal/inline_entity_form": "^3.0",
         "drupal/matomo": "^1.26",
