@@ -4,24 +4,29 @@
  * Carte "actualité" (liste des actualités).
  */
 #}
-<div{{ attributes.addClass('card', 'card--actualite') }}>
-  {% if content.field_image|render %}
-    <div class="card__media">
+<article{{ attributes.addClass('card', 'card--actualite') }}>
+  <div class="card__media">
+    {% if content.field_image|render %}
       {{ content.field_image }}
-    </div>
-  {% endif %}
-  <div class="card__body">
-    {% if content.field_type_actualite|render %}
-      <span class="card__eyebrow">{{ content.field_type_actualite }}</span>
+    {% else %}
+      <span class="card__placeholder" aria-hidden="true"></span>
     {% endif %}
+  </div>
+  <div class="card__body">
+    <div class="card__top">
+      {% if content.field_type_actualite|render %}
+        <span class="card__eyebrow">{{ content.field_type_actualite }}</span>
+      {% endif %}
+      {% if content.field_date_publication|render %}
+        <span class="card__date">{{ content.field_date_publication }}</span>
+      {% endif %}
+    </div>
     <h3 class="card__title">
       <a href="{{ url }}">{{ label }}</a>
     </h3>
     {% if content.field_chapo|render %}
       <div class="card__excerpt">{{ content.field_chapo }}</div>
     {% endif %}
-    {% if content.field_date_publication|render %}
-      <div class="card__meta">{{ content.field_date_publication }}</div>
-    {% endif %}
+    <span class="card__more" aria-hidden="true">{{ 'Lire la suite'|t }}</span>
   </div>
-</div>
+</article>

@@ -4,7 +4,7 @@
  * Carte "démarche" (liste des démarches).
  */
 #}
-<div{{ attributes.addClass('card', 'card--demarche') }}>
+<article{{ attributes.addClass('card', 'card--demarche') }}>
   <div class="card__body">
     {% if content.field_service|render %}
       <span class="card__eyebrow">{{ content.field_service }}</span>
@@ -15,13 +15,14 @@
     {% if content.field_public_concerne|render %}
       <div class="card__excerpt">{{ content.field_public_concerne }}</div>
     {% endif %}
-    {% if content.field_delais|render %}
-      <div class="card__meta">
-        <span>
+    <div class="card__footer">
+      {% if content.field_delais|render %}
+        <span class="card__delay">
           <svg class="button__icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>
           {{ content.field_delais }}
         </span>
-      </div>
-    {% endif %}
+      {% endif %}
+      <span class="card__more" aria-hidden="true">{{ 'Voir la démarche'|t }}</span>
+    </div>
   </div>
-</div>
+</article>

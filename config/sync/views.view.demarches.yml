@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.field_service
+    - node.type.demarche
+    - system.menu.main
+    - taxonomy.vocabulary.services
   module:
     - node
     - taxonomy
@@ -238,6 +240,7 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
@@ -255,6 +258,7 @@ display:
         title: 'Démarches consulaires'
         description: ''
         weight: 0
+        enabled: true
         expanded: false
         menu_name: main
         parent: ''
@@ -263,6 +267,7 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions

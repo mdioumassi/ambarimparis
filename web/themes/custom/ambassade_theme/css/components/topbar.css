@@ -4,8 +4,9 @@
  */
 
 .topbar {
-  background-color: var(--color-ink-900);
-  color: var(--color-white);
+  background-color: var(--color-green-50);
+  border-block-end: var(--border-width) solid var(--color-green-100);
+  color: var(--color-text-muted);
 }
 
 .topbar__inner {
@@ -13,10 +14,15 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  padding-block: var(--space-2);
+  padding-block: var(--space-1);
   font-size: var(--font-size-sm);
 }
 
+.topbar__inner .region-topbar {
+  display: contents;
+}
+
+/* --- Urgences consulaires ------------------------------------------------ */
 .topbar__inner .block-basic p {
   margin: 0;
 }
@@ -25,33 +31,83 @@
   min-height: var(--tap-target-min);
   display: flex;
   align-items: center;
+  color: var(--color-ink-700);
+  font-weight: var(--font-weight-semibold);
+}
+
+.topbar__inner .block-basic p::before {
+  content: '';
+  display: inline-block;
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
+  margin-inline-end: var(--space-2);
+  border-radius: 50%;
+  background-color: var(--color-danger);
+  box-shadow: 0 0 0 3px var(--color-red-100);
 }
 
 @media (max-width: 767px) {
   .topbar__inner .block-basic {
     display: none;
   }
+
+  .topbar__inner {
+    justify-content: flex-end;
+  }
 }
 
+/* --- Sélecteur de langue : segments FR | العربية ---------------------------- */
 .topbar .language-switcher-language-url ul {
   display: flex;
-  gap: var(--space-3);
+  gap: 2px;
   margin: 0;
-  padding: 0;
+  padding: 2px;
   list-style: none;
+  border: var(--border-width) solid var(--color-green-100);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-background);
 }
 
 .topbar .language-switcher-language-url a {
   display: flex;
   align-items: center;
-  min-height: var(--tap-target-min);
-  color: var(--color-white);
+  min-height: 1.75rem;
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-pill);
+  color: var(--color-ink-700);
+  font-size: 0;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
-  font-weight: var(--font-weight-normal);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* Libellés courts et natifs, quelle que soit la langue de l'interface. */
+.topbar .language-switcher-language-url a::before {
+  font-size: var(--font-size-sm);
+}
+
+.topbar .language-switcher-language-url a[hreflang='fr']::before {
+  content: 'FR';
+}
+
+.topbar .language-switcher-language-url a[hreflang='ar']::before {
+  content: 'العربية';
+  font-family: var(--font-arabic);
+}
+
+.topbar .language-switcher-language-url a:hover {
+  background-color: var(--color-green-100);
+  color: var(--color-green-900);
 }
 
 .topbar .language-switcher-language-url a.is-active,
 .topbar .language-switcher-language-url a[aria-current] {
-  color: var(--color-accent);
-  font-weight: var(--font-weight-bold);
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topbar .language-switcher-language-url a {
+    transition: none;
+  }
 }

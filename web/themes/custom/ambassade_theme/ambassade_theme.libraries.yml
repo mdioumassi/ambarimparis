@@ -116,6 +116,9 @@ components:
       css/components/hero.css: {  }
       css/components/alert-banner.css: {  }
       css/components/card.css: {  }
+      css/components/actualites.css: {  }
+      css/components/demarches.css: {  }
+      css/components/pages.css: {  }
       css/components/accordion.css: {  }
       css/components/infos-pratiques.css: {  }
       css/components/footer.css: {  }
@@ -125,6 +128,14 @@ components:
   dependencies:
     - ambassade_theme/tokens
     - ambassade_theme/nav
+    - ambassade_theme/actualites-filter
+
+actualites-filter:
+  js:
+    js/actualites-filter.js: {  }
+  dependencies:
+    - core/drupal
+    - core/once
 
 nav:
   js:

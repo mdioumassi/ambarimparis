@@ -25,19 +25,40 @@ content:
     third_party_settings: {  }
     weight: -20
     region: content
+  field_delais:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_public_concerne:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 140
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_service:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
-  field_delais: true
   field_faq: true
   field_formulaires: true
   field_modalites: true
   field_pieces_a_fournir: true
-  field_public_concerne: true
-  field_service: true
   field_tarifs: true
   langcode: true
   search_api_excerpt: true

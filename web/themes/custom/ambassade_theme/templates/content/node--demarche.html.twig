@@ -4,59 +4,61 @@
  * Fiche démarche (vue complète).
  */
 #}
-<article{{ attributes.addClass('node', 'node--type-demarche', 'container', 'container--narrow') }}>
+<article{{ attributes.addClass('node', 'node--type-demarche', 'procedure') }}>
 
   {% if content.field_service|render %}
-    <div class="node__header">
-      <span class="card__eyebrow">{{ content.field_service }}</span>
+    <div class="procedure__meta">
+      <span class="procedure__service">{{ content.field_service }}</span>
     </div>
   {% endif %}
 
-  <dl class="node__meta-grid">
-    {% if content.field_delais|render %}
-      <div>
-        <dt><svg class="button__icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>{{ 'Délais'|t }}</dt>
-        <dd>{{ content.field_delais }}</dd>
-      </div>
-    {% endif %}
-    {% if content.field_tarifs|render %}
-      <div>
-        <dt>{{ 'Tarifs'|t }}</dt>
-        <dd>{{ content.field_tarifs }}</dd>
-      </div>
-    {% endif %}
-  </dl>
+  {% if content.field_delais|render or content.field_tarifs|render %}
+    <dl class="procedure__facts">
+      {% if content.field_delais|render %}
+        <div class="procedure__fact">
+          <dt><svg class="button__icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>{{ 'Délais'|t }}</dt>
+          <dd>{{ content.field_delais }}</dd>
+        </div>
+      {% endif %}
+      {% if content.field_tarifs|render %}
+        <div class="procedure__fact">
+          <dt>{{ 'Tarifs'|t }}</dt>
+          <dd>{{ content.field_tarifs }}</dd>
+        </div>
+      {% endif %}
+    </dl>
+  {% endif %}
 
   {% if content.field_public_concerne|render %}
-    <section>
+    <section class="procedure__section">
       <h2>{{ 'Public concerné'|t }}</h2>
       {{ content.field_public_concerne }}
     </section>
   {% endif %}
 
   {% if content.field_pieces_a_fournir|render %}
-    <section>
+    <section class="procedure__section procedure__section--pieces">
       <h2>{{ 'Pièces à fournir'|t }}</h2>
       {{ content.field_pieces_a_fournir }}
     </section>
   {% endif %}
 
   {% if content.field_modalites|render %}
-    <section>
+    <section class="procedure__section">
       <h2>{{ 'Modalités de dépôt et de retrait'|t }}</h2>
       {{ content.field_modalites }}
     </section>
   {% endif %}
 
   {% if content.field_formulaires|render %}
-    <section>
+    <section class="procedure__section">
       <h2>{{ 'Formulaires'|t }}</h2>
       {{ content.field_formulaires }}
     </section>
   {% endif %}
 
   {% if content.field_faq|render %}
-    <section>
+    <section class="procedure__section procedure__section--faq">
       <h2>{{ 'Questions fréquentes'|t }}</h2>
       {{ content.field_faq }}
     </section>
@@ -81,5 +83,7 @@
       </script>
     {% endif %}
   {% endif %}
+
+  <a class="article__back" href="{{ path('view.demarches.page_1') }}">{{ 'Toutes les démarches'|t }}</a>
 
 </article>

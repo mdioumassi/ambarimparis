@@ -1,0 +1,202 @@
+/**
+ * Pages de contenu (type « page », ex. /presentation-de-lambassade) :
+ * titre, texte courant et composants (paragraphes) alignés sur une même
+ * colonne de lecture.
+ */
+
+.region-content:has(.node--type-page.node--view-mode-full) {
+  max-inline-size: 52rem;
+  margin-inline: auto;
+  padding-block: var(--space-7);
+}
+
+.region-content:has(.node--type-page.node--view-mode-full) #block-ambassade-page-title {
+  margin-block-end: var(--space-6);
+  padding-block-end: var(--space-4);
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.region-content:has(.node--type-page.node--view-mode-full) .page-title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+.node--type-page .field--name-field-composants > .field__items {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* Le texte occupe toute la colonne, aligné avec le titre. */
+.node--type-page .prose.container {
+  max-inline-size: none;
+  padding-inline: 0;
+}
+
+.prose {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+
+.prose > :first-child {
+  margin-block-start: 0;
+}
+
+.prose > :last-child {
+  margin-block-end: 0;
+}
+
+.prose p:first-child:not(:only-child) {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+}
+
+.prose h2 {
+  margin-block: var(--space-6) var(--space-3);
+  font-size: var(--font-size-lg);
+}
+
+/* Accordéon sous forme de cartes. */
+.node--type-page .accordion {
+  display: grid;
+  gap: var(--space-3);
+  border: 0;
+}
+
+.node--type-page .accordion .field__items {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.node--type-page .accordion__item {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.node--type-page .accordion__item[open] {
+  border-color: var(--color-green-600);
+  background-color: var(--color-green-50);
+}
+
+.node--type-page .accordion__summary {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.node--type-page .accordion__summary:hover {
+  color: var(--color-primary);
+}
+
+.node--type-page .accordion__content {
+  padding: 0 var(--space-5) var(--space-4);
+}
+
+.node--type-page .accordion__content p {
+  margin-block: 0 var(--space-3);
+  line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node--type-page .accordion__item {
+    transition: none;
+  }
+}
+
+/* --- Page avec formulaire (/contact) -------------------------------------- */
+.region-content:has(.node--type-page .webform-submission-form) {
+  max-inline-size: 66rem;
+}
+
+.node--type-page .field--name-field-composants:has(.webform-submission-form) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .node--type-page .field--name-field-composants:has(.webform-submission-form) {
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-rows: auto 1fr;
+    gap: var(--space-5) var(--space-6);
+  }
+
+  .node--type-page .field--name-field-composants:has(.webform-submission-form) > .field__item:has(.webform-submission-form) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .node--type-page .field--name-field-composants:has(.webform-submission-form) > .field__item:not(:has(.webform-submission-form)) {
+    grid-column: 1;
+  }
+}
+
+/* Cartes d'information (horaires, accès). */
+.node--type-page .field--name-field-composants:has(.webform-submission-form) .prose {
+  padding: var(--space-5);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-green-50);
+}
+
+.node--type-page .field--name-field-composants:has(.webform-submission-form) .prose p:first-child:not(:only-child) {
+  color: inherit;
+  font-size: inherit;
+}
+
+.node--type-page .field--name-field-composants:has(.webform-submission-form) .prose h2 {
+  margin-block: 0 var(--space-3);
+  font-size: var(--font-size-md);
+}
+
+/* Carte du formulaire. */
+.node--type-page .container:has(> .field--name-field-webform) {
+  max-inline-size: none;
+  padding: var(--space-5);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-card-soft);
+}
+
+@media (min-width: 768px) {
+  .node--type-page .container:has(> .field--name-field-webform) {
+    padding: var(--space-6);
+  }
+}
+
+.webform-submission-form {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.webform-submission-form .form-item {
+  max-inline-size: none;
+  margin: 0;
+}
+
+.webform-submission-form label {
+  font-size: var(--font-size-sm);
+}
+
+.webform-submission-form input:not([type='submit']):not([type='hidden']),
+.webform-submission-form textarea {
+  border-radius: var(--radius-md);
+}
+
+.webform-submission-form textarea {
+  min-block-size: 9rem;
+}
+
+.webform-submission-form .form-actions {
+  margin: 0;
+}
+
+.webform-submission-form .webform-button--submit {
+  min-block-size: var(--tap-target-min);
+  padding-inline: var(--space-6);
+  border-radius: var(--radius-pill);
+}

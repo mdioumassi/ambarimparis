@@ -1,0 +1,354 @@
+/**
+ * Page /demarches : en-tête, cartes épurées, filtre par service.
+ * Le filtre et l'en-tête partagent le style de /actualites.
+ */
+
+/* --- En-tête de page ---------------------------------------------------- */
+.region-content:has(.view-id-demarches.view-display-id-page_1) #block-ambassade-page-title {
+  max-inline-size: var(--content-narrow-width);
+  margin-block-end: var(--space-6);
+  padding-block-end: var(--space-5);
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.region-content:has(.view-id-demarches.view-display-id-page_1) #block-ambassade-page-title::after {
+  content: 'Retrouvez les pièces à fournir, les délais et les formulaires de chaque démarche.';
+  display: block;
+  margin-block-start: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+}
+
+html[lang='ar'] .region-content:has(.view-id-demarches.view-display-id-page_1) #block-ambassade-page-title::after {
+  content: 'اطّلع على الوثائق المطلوبة والآجال والاستمارات الخاصة بكل إجراء.';
+}
+
+.region-content:has(.view-id-demarches.view-display-id-page_1) .page-title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+/* --- Filtre --------------------------------------------------------------- */
+.view-id-demarches.view-display-id-page_1 .view-filters {
+  margin-block-end: var(--space-6);
+}
+
+.view-id-demarches.view-display-id-page_1 .views-exposed-form .form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.view-id-demarches.view-display-id-page_1 .views-exposed-form .form-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.view-id-demarches.view-display-id-page_1 .views-exposed-form label {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.view-id-demarches.view-display-id-page_1 .views-exposed-form .form-select {
+  min-block-size: var(--tap-target-min);
+  min-inline-size: 14rem;
+  padding-inline: var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-background);
+}
+
+.view-id-demarches.view-display-id-page_1 .views-exposed-form .form-actions {
+  margin: 0;
+}
+
+.js .view-id-demarches.view-display-id-page_1 .views-exposed-form .form-actions {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.js .view-id-demarches.view-display-id-page_1 .views-exposed-form .form-actions:focus-within {
+  position: static;
+  inline-size: auto;
+  block-size: auto;
+  clip-path: none;
+}
+
+/* --- Grille --------------------------------------------------------------- */
+.view-id-demarches.view-display-id-page_1 .view-content {
+  gap: var(--space-5);
+}
+
+@media (min-width: 1440px) {
+  .view-id-demarches.view-display-id-page_1 .view-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Carte -------------------------------------------------------------- */
+.card--demarche {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card--demarche:hover {
+  border-color: var(--color-green-600);
+  box-shadow: var(--shadow-card-soft);
+  transform: none;
+}
+
+.card--demarche .card__body {
+  padding: var(--space-5);
+}
+
+.card--demarche .card__eyebrow {
+  align-self: flex-start;
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-green-100);
+  color: var(--color-green-900);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.card--demarche .card__eyebrow .field,
+.card--demarche .card__delay .field {
+  display: inline;
+}
+
+.card--demarche .card__title {
+  margin-block-end: var(--space-2);
+  font-weight: var(--font-weight-bold);
+}
+
+.card--demarche:hover .card__title a,
+.card--demarche .card__title a:focus-visible {
+  color: var(--color-primary);
+}
+
+.card--demarche .card__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card--demarche .card__excerpt p {
+  margin: 0;
+}
+
+.card--demarche .card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  margin-block-start: auto;
+  padding-block-start: var(--space-3);
+  border-block-start: var(--border-width) solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.card--demarche .card__delay {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+}
+
+.card--demarche .card__more {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card--demarche .card__more::after {
+  content: ' →';
+  display: inline-block;
+  transition: transform var(--transition-base);
+}
+
+[dir='rtl'] .card--demarche .card__more::after {
+  content: ' ←';
+}
+
+.card--demarche:hover .card__more::after {
+  transform: translateX(4px);
+}
+
+[dir='rtl'] .card--demarche:hover .card__more::after {
+  transform: translateX(-4px);
+}
+
+.view-id-demarches.view-display-id-page_1 .pager {
+  margin-block-start: var(--space-7);
+}
+
+.view-id-demarches .view-empty {
+  padding: var(--space-7) var(--space-4);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-green-50);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--demarche,
+  .card--demarche .card__more::after {
+    transition: none;
+  }
+
+  .card--demarche:hover .card__more::after {
+    transform: none;
+  }
+}
+
+/* --- Fiche démarche (/demarches/*) ------------------------------------------ */
+.region-content:has(.node--type-demarche.node--view-mode-full) {
+  max-inline-size: 52rem;
+  margin-inline: auto;
+  padding-block: var(--space-7);
+}
+
+.region-content:has(.node--type-demarche.node--view-mode-full) .page-title {
+  margin: 0 0 var(--space-4);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+.node--type-demarche.node--view-mode-full.procedure {
+  padding-block: 0;
+}
+
+.procedure__meta {
+  margin-block-end: var(--space-5);
+}
+
+.procedure__service {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-green-100);
+  color: var(--color-green-900);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.procedure__service .field {
+  display: inline;
+}
+
+/* Informations clés : délais et tarifs. */
+.procedure__facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .procedure__facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.procedure__fact {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-green-50);
+  border: var(--border-width) solid var(--color-green-100);
+}
+
+.procedure__fact dt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-block-end: var(--space-1);
+  color: var(--color-green-700);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.procedure__fact dd {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.procedure__fact dd p {
+  margin: 0;
+}
+
+/* Sections. */
+.procedure__section {
+  margin-block-end: var(--space-6);
+  padding-block-end: var(--space-6);
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.procedure__section:last-of-type {
+  border-block-end: 0;
+}
+
+.procedure__section h2 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-tight);
+}
+
+.procedure__section p {
+  margin-block: 0 var(--space-3);
+  line-height: 1.7;
+}
+
+/* Pièces à fournir : liste de contrôle. */
+.procedure__section--pieces .field__items {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+}
+
+.procedure__section--pieces .field__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+}
+
+.procedure__section--pieces .field__item::before {
+  content: '✓';
+  flex: none;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-green-700);
+  color: var(--color-white);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.procedure--faq .accordion,
+.procedure__section--faq .field__items {
+  margin-block-start: var(--space-2);
+}

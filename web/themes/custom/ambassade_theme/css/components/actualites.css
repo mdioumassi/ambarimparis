@@ -1,0 +1,391 @@
+/**
+ * Page /actualites : en-tête, grille de cartes épurées, pagination.
+ * Les cartes .card--actualite sont aussi utilisées sur l'accueil.
+ */
+
+/* --- En-tête de page ---------------------------------------------------- */
+.region-content:has(.view-id-actualites.view-display-id-page_1) #block-ambassade-page-title {
+  max-inline-size: var(--content-narrow-width);
+  margin-block-end: var(--space-6);
+  padding-block-end: var(--space-5);
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.region-content:has(.view-id-actualites.view-display-id-page_1) #block-ambassade-page-title::after {
+  content: 'Communiqués, annonces et informations de l\2019 Ambassade.';
+  display: block;
+  margin-block-start: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+}
+
+html[lang='ar'] .region-content:has(.view-id-actualites.view-display-id-page_1) #block-ambassade-page-title::after {
+  content: 'بلاغات وإعلانات ومعلومات السفارة.';
+}
+
+.region-content:has(.view-id-actualites.view-display-id-page_1) .page-title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+/* --- Grille ---------------------------------------------------------------- */
+.view-id-actualites.view-display-id-page_1 .view-content {
+  gap: var(--space-6) var(--space-5);
+}
+
+@media (min-width: 1440px) {
+  .view-id-actualites.view-display-id-page_1 .view-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Carte -------------------------------------------------------------- */
+.card--actualite {
+  border: 0;
+  border-radius: var(--radius-lg);
+  background-color: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.card--actualite:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.card--actualite .card__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  block-size: auto;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-green-100);
+}
+
+.card--actualite .card__media img {
+  transition: transform 400ms ease;
+}
+
+.card--actualite:hover .card__media img {
+  transform: scale(1.04);
+}
+
+.card--actualite .card__placeholder {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, var(--color-green-100), var(--color-green-50));
+}
+
+.card--actualite .card__body {
+  padding: var(--space-4) 0 0;
+}
+
+.card--actualite .card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-block-end: var(--space-2);
+}
+
+.card--actualite .card__eyebrow {
+  margin: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-green-100);
+  color: var(--color-green-900);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.card--actualite .card__eyebrow .field,
+.card--actualite .card__date .field {
+  display: inline;
+}
+
+.card--actualite .card__date {
+  color: var(--color-ink-500);
+  font-size: var(--font-size-sm);
+}
+
+.card--actualite .card__title {
+  margin-block-end: var(--space-2);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  -webkit-line-clamp: 3;
+}
+
+.card--actualite .card__title a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
+  transition: background-size var(--transition-base), color var(--transition-base);
+}
+
+.card--actualite:hover .card__title a,
+.card--actualite .card__title a:focus-visible {
+  color: var(--color-primary);
+  background-size: 100% 1px;
+}
+
+.card--actualite .card__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-block-end: var(--space-3);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+.card--actualite .card__excerpt p {
+  margin: 0;
+}
+
+.card--actualite .card__more {
+  margin-block-start: auto;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.card--actualite .card__more::after {
+  content: ' →';
+  display: inline-block;
+  transition: transform var(--transition-base);
+}
+
+[dir='rtl'] .card--actualite .card__more::after {
+  content: ' ←';
+}
+
+.card--actualite:hover .card__more::after {
+  transform: translateX(4px);
+}
+
+[dir='rtl'] .card--actualite:hover .card__more::after {
+  transform: translateX(-4px);
+}
+
+/* Accueil : on garde la carte sur fond blanc dans la section verte. */
+.region-news .card--actualite {
+  padding: var(--space-3);
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-card-soft);
+}
+
+.region-news .card--actualite .card__body {
+  padding: var(--space-4) var(--space-2) var(--space-2);
+}
+
+/* --- Pagination & RSS ----------------------------------------------------- */
+.view-id-actualites.view-display-id-page_1 .pager {
+  margin-block-start: var(--space-7);
+}
+
+.view-id-actualites.view-display-id-page_1 .pager__item a {
+  border-radius: var(--radius-pill);
+}
+
+.view-id-actualites.view-display-id-page_1 .feed-icons {
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-4);
+  border-block-start: var(--border-width) solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.view-id-actualites .view-empty {
+  padding: var(--space-7) var(--space-4);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-green-50);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--actualite .card__media img,
+  .card--actualite .card__more::after {
+    transition: none;
+  }
+
+  .card--actualite:hover .card__media img,
+  .card--actualite:hover .card__more::after {
+    transform: none;
+  }
+}
+
+/* --- Filtre par type ------------------------------------------------------ */
+.view-id-actualites.view-display-id-page_1 .view-filters {
+  margin-block-end: var(--space-6);
+}
+
+.view-id-actualites.view-display-id-page_1 .views-exposed-form .form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.view-id-actualites.view-display-id-page_1 .views-exposed-form .form-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.view-id-actualites.view-display-id-page_1 .views-exposed-form label {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.view-id-actualites.view-display-id-page_1 .views-exposed-form .form-select {
+  min-block-size: var(--tap-target-min);
+  min-inline-size: 14rem;
+  padding-inline: var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-background);
+}
+
+.view-id-actualites.view-display-id-page_1 .views-exposed-form .form-actions {
+  margin: 0;
+}
+
+/* Le bouton devient superflu quand le filtre s'applique au changement. */
+.js .view-id-actualites.view-display-id-page_1 .views-exposed-form .form-actions {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.js .view-id-actualites.view-display-id-page_1 .views-exposed-form .form-actions:focus-within {
+  position: static;
+  inline-size: auto;
+  block-size: auto;
+  clip-path: none;
+}
+
+/* --- Fiche actualité (/actualites/*) ---------------------------------------- */
+.region-content:has(.node--type-actualite.node--view-mode-full) {
+  max-inline-size: var(--content-narrow-width);
+  margin-inline: auto;
+  padding-block: var(--space-7);
+}
+
+.region-content:has(.node--type-actualite.node--view-mode-full) .page-title {
+  margin: 0 0 var(--space-4);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+.node--type-actualite.node--view-mode-full.article {
+  padding-block: 0;
+}
+
+.article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-block-end: var(--space-5);
+}
+
+.article__type {
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-green-100);
+  color: var(--color-green-900);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.article__date {
+  color: var(--color-ink-500);
+  font-size: var(--font-size-sm);
+}
+
+.article__type .field,
+.article__date .field {
+  display: inline;
+}
+
+.article__chapo {
+  margin-block-end: var(--space-6);
+  padding-inline-start: var(--space-4);
+  border-inline-start: 3px solid var(--color-accent);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+}
+
+.article__chapo p {
+  margin: 0;
+}
+
+.article__media {
+  margin-block: 0 var(--space-6);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.article__media img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.article__body {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+
+.article__body > :first-child {
+  margin-block-start: 0;
+}
+
+.article__body h2 {
+  margin-block: var(--space-6) var(--space-3);
+  font-size: var(--font-size-lg);
+}
+
+.article__body img {
+  max-inline-size: 100%;
+  block-size: auto;
+  border-radius: var(--radius-md);
+}
+
+.article__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-7);
+  padding-block-start: var(--space-4);
+  min-block-size: var(--tap-target-min);
+  border-block-start: var(--border-width) solid var(--color-border);
+  inline-size: 100%;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.article__back::before {
+  content: '←';
+}
+
+[dir='rtl'] .article__back::before {
+  content: '→';
+}
+
+.article__back:hover {
+  text-decoration: underline;
+}

@@ -28,7 +28,7 @@ content:
     region: content
   field_delais:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
       link_rel: canonical
@@ -37,7 +37,7 @@ content:
     region: content
   field_faq:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -46,7 +46,7 @@ content:
     region: content
   field_formulaires:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -55,14 +55,14 @@ content:
     region: content
   field_modalites:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
   field_pieces_a_fournir:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
       link_rel: canonical
@@ -71,22 +71,22 @@ content:
     region: content
   field_public_concerne:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_service:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 8
     region: content
   field_tarifs:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 4
